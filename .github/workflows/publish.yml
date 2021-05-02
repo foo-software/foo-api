@@ -21,11 +21,6 @@ jobs:
         run: |
           npm install lerna -g
           lerna bootstrap --hoist
-      - name: Generate Schema
-        run: |
-          node packages/foo-api-ci-tools/dist/bin/config-git.js
-          node packages/ghost-graphql/dist/bin/generate-schema.js
-          node packages/foo-api-ci-tools/dist/bin/commit-schema.js
       - name: Publish Packages
         run: |
           node packages/foo-api-ci-tools/dist/bin/publish-packages.js
