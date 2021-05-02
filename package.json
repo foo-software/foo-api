@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "private": true,
+  "keywords": [
+    "api",
+    "api client",
+    "npm package",
+    "lighthouse",
+    "REST",
+    "server",
+    "typescript"
+  ],
+  "scripts": {
+    "lint": "eslint ./packages/**/src --ext .ts,.tsx --cache --fix",
+    "prettier": "prettier --single-quote --write './packages/**/*.{ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./packages/**/*.{ts,tsx}": [
+      "npm run prettier",
+      "npm run lint"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "husky": "^4.2.5",
+    "lerna": "^3.18.2",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.0.5"
+  }
+}
