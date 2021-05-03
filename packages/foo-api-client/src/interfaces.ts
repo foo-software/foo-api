@@ -8,9 +8,17 @@ export interface ClientConfigInterface {
   apiUrl?: string;
 }
 
-export interface FindPagesApiResponseInterface extends ApiResponseInterface {
-  data?: PageInterface;
+export interface CreatePagePayloadInterface {
+  device?: DeviceType;
+  name: string;
+  url: string;
 }
+
+export interface CreatePageParameters extends ClientConfigInterface {
+  payload: CreatePagePayloadInterface;
+}
+
+type DeviceType = 'desktop' | 'mobile';
 
 export interface FindPagesParameters
   extends ClientConfigInterface,
@@ -29,7 +37,15 @@ export interface PageInterface {
   _id: string;
   accountId: string;
   createdAt: string;
-  device: 'desktop' | 'mobile';
+  device: DeviceType;
   name: string;
   url: string;
+}
+
+export interface PageApiResponseInterface extends ApiResponseInterface {
+  data?: PageInterface;
+}
+
+export interface PagesApiResponseInterface extends ApiResponseInterface {
+  data?: PageInterface[];
 }
