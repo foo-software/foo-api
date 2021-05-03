@@ -1,9 +1,9 @@
 import fetch from 'node-fetch';
 import { LATEST_API_URL } from './constants';
 import {
-  PageApiResponseInterface,
+  LighthouseAuditApiResponseInterface,
   ResourceParameters,
-  UpdatePagePayloadInterface,
+  UpdateLighthouseAuditPayloadInterface,
 } from './interfaces';
 
 export default async ({
@@ -11,9 +11,9 @@ export default async ({
   payload,
 }: {
   parameters: ResourceParameters;
-  payload: UpdatePagePayloadInterface;
-}): Promise<PageApiResponseInterface> => {
-  const result = await fetch(`${apiUrl}/pages/${id}`, {
+  payload: UpdateLighthouseAuditPayloadInterface;
+}): Promise<LighthouseAuditApiResponseInterface> => {
+  const result = await fetch(`${apiUrl}/lighthouseAudits/${id}`, {
     method: 'put',
     headers: {
       authorization: apiToken,

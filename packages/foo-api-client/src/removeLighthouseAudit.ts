@@ -1,13 +1,16 @@
 import fetch from 'node-fetch';
 import { LATEST_API_URL } from './constants';
-import { PageApiResponseInterface, ResourceParameters } from './interfaces';
+import {
+  LighthouseAuditApiResponseInterface,
+  ResourceParameters,
+} from './interfaces';
 
 export default async ({
   parameters: { apiToken, apiUrl = LATEST_API_URL, id },
 }: {
   parameters: ResourceParameters;
-}): Promise<PageApiResponseInterface> => {
-  const result = await fetch(`${apiUrl}/pages/${id}`, {
+}): Promise<LighthouseAuditApiResponseInterface> => {
+  const result = await fetch(`${apiUrl}/lighthouseAudits/${id}`, {
     method: 'delete',
     headers: {
       authorization: apiToken,

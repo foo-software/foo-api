@@ -1,19 +1,25 @@
 import createPage from './createPage';
 import createPageQueueItem from './createPageQueueItem';
+import findPageLighthouseAudits from './findPageLighthouseAudits';
 import findPageQueueItems from './findPageQueueItems';
 import findPages from './findPages';
+import removeLighthouseAudit from './removeLighthouseAudit';
 import removePage from './removePage';
+import updateLighthouseAudit from './updateLighthouseAudit';
 import updatePage from './updatePage';
 import {
   ClientConfigInterface,
   CreatePagePayloadInterface,
   CreatePageQueueItemPayloadInterface,
+  LighthouseAuditApiResponseInterface,
+  LighthouseAuditsApiResponseInterface,
   OptionalFindParameters,
   PageApiResponseInterface,
-  PageParametersBase,
+  ResourceParametersBase,
   PagesApiResponseInterface,
   QueueItemApiResponseInterface,
   QueueItemsApiResponseInterface,
+  UpdateLighthouseAuditPayloadInterface,
   UpdatePagePayloadInterface,
 } from './interfaces';
 import { LATEST_API_URL } from './constants';
@@ -45,7 +51,7 @@ export default class ApiClient {
     parameters,
     payload,
   }: {
-    parameters: PageParametersBase;
+    parameters: ResourceParametersBase;
     payload: CreatePageQueueItemPayloadInterface;
   }): Promise<QueueItemApiResponseInterface> {
     return createPageQueueItem({
@@ -58,10 +64,24 @@ export default class ApiClient {
     });
   }
 
+  async findPageLighthouseAudits({
+    parameters,
+  }: {
+    parameters: ResourceParametersBase;
+  }): Promise<LighthouseAuditsApiResponseInterface> {
+    return findPageLighthouseAudits({
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+    });
+  }
+
   async findPageQueueItems({
     parameters,
   }: {
-    parameters: PageParametersBase;
+    parameters: ResourceParametersBase;
   }): Promise<QueueItemsApiResponseInterface> {
     return findPageQueueItems({
       parameters: {
@@ -86,10 +106,24 @@ export default class ApiClient {
     });
   }
 
+  async removeLighthouseAudit({
+    parameters,
+  }: {
+    parameters: ResourceParametersBase;
+  }): Promise<LighthouseAuditApiResponseInterface> {
+    return removeLighthouseAudit({
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+    });
+  }
+
   async removePage({
     parameters,
   }: {
-    parameters: PageParametersBase;
+    parameters: ResourceParametersBase;
   }): Promise<PageApiResponseInterface> {
     return removePage({
       parameters: {
@@ -100,11 +134,28 @@ export default class ApiClient {
     });
   }
 
+  async updateLighthouseAudit({
+    parameters,
+    payload,
+  }: {
+    parameters: ResourceParametersBase;
+    payload: UpdateLighthouseAuditPayloadInterface;
+  }): Promise<LighthouseAuditApiResponseInterface> {
+    return updateLighthouseAudit({
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+      payload,
+    });
+  }
+
   async updatePage({
     parameters,
     payload,
   }: {
-    parameters: PageParametersBase;
+    parameters: ResourceParametersBase;
     payload: UpdatePagePayloadInterface;
   }): Promise<PageApiResponseInterface> {
     return updatePage({

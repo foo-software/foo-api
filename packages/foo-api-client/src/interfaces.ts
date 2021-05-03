@@ -20,9 +20,50 @@ export interface CreatePageQueueItemPayloadInterface {
 
 type DeviceType = 'desktop' | 'mobile';
 
+export interface FindPageLighthouseAuditsParameters
+  extends ResourceParametersBase,
+    FindPagesParameters {}
+
 export interface FindPagesParameters
   extends ClientConfigInterface,
     OptionalFindParameters {}
+
+export interface LighthouseAuditInterface {
+  createdAt: string;
+  device: DeviceType;
+  error: string;
+  finalScreenshot: string;
+  id: string;
+  lighthouseVersion: string;
+  opportunities: Opportunity[];
+  pageId: string;
+  queueId: string;
+  report: string;
+  scoreAccessibility: number;
+  scoreBestPractices: number;
+  scorePerformance: number;
+  scoreProgressiveWebApp: number;
+  scoreSeo: number;
+  tag: string;
+  url: string;
+}
+
+export interface LighthouseAuditApiResponseInterface
+  extends ApiResponseInterface {
+  data?: LighthouseAuditInterface;
+}
+
+export interface LighthouseAuditsApiResponseInterface
+  extends ApiResponseInterface {
+  data?: LighthouseAuditInterface[];
+}
+
+export interface Opportunity {
+  id: string;
+  numericValue: number;
+  numericUnit?: 'millisecond' | string;
+  rating: 'average' | 'error' | 'pass' | 'fail' | string;
+}
 
 export interface OptionalFindParameters {
   criteria?: 'ascending' | 'descending';
@@ -50,14 +91,6 @@ export interface PagesApiResponseInterface extends ApiResponseInterface {
   data?: PageInterface[];
 }
 
-export interface PageParametersBase {
-  id: string;
-}
-
-export interface PageParameters
-  extends ClientConfigInterface,
-    PageParametersBase {}
-
 export interface QueueItemInterface {
   createdAt: string;
   id: string;
@@ -75,6 +108,18 @@ export interface QueueItemApiResponseInterface extends ApiResponseInterface {
 
 export interface QueueItemsApiResponseInterface extends ApiResponseInterface {
   data?: QueueItemInterface[];
+}
+
+export interface ResourceParametersBase {
+  id: string;
+}
+
+export interface ResourceParameters
+  extends ClientConfigInterface,
+    ResourceParametersBase {}
+
+export interface UpdateLighthouseAuditPayloadInterface {
+  tag?: string;
 }
 
 export interface UpdatePagePayloadInterface {

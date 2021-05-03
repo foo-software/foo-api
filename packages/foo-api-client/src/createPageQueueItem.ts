@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import { LATEST_API_URL } from './constants';
 import {
   CreatePageQueueItemPayloadInterface,
-  PageParameters,
+  ResourceParameters,
   QueueItemApiResponseInterface,
 } from './interfaces';
 
@@ -10,7 +10,7 @@ export default async ({
   parameters: { apiToken, apiUrl = LATEST_API_URL, id },
   payload,
 }: {
-  parameters: PageParameters;
+  parameters: ResourceParameters;
   payload: CreatePageQueueItemPayloadInterface;
 }): Promise<QueueItemApiResponseInterface> => {
   const result = await fetch(`${apiUrl}/pages/${id}/queueItems`, {
