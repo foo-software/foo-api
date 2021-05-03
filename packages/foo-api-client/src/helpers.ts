@@ -6,11 +6,11 @@ export const getQueryString = (parameters: any = {}) =>
     : `?${querystring.encode({ ...parameters })}`;
 
 export const getMissingRequiredFieldErrors = ({
-  fields,
   data,
+  fields,
 }: {
-  fields: Array<any>;
   data: any;
+  fields: Array<any>;
 }) => {
   const missingFields = fields.reduce(
     (accumulator, current) => [
