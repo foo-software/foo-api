@@ -1,5 +1,8 @@
 import findPages from './findPages';
-import { ApiResponseInterface, ClientConfigInterface } from './interfaces';
+import {
+  ClientConfigInterface,
+  FindPagesApiResponseInterface,
+} from './interfaces';
 import { LATEST_API_URL } from './constants';
 
 export default class ApiClient {
@@ -11,7 +14,7 @@ export default class ApiClient {
     this.apiUrl = apiUrl;
   }
 
-  async findPages(): Promise<ApiResponseInterface> {
+  async findPages(): Promise<FindPagesApiResponseInterface> {
     return findPages({
       apiToken: this.apiToken,
       apiUrl: this.apiUrl,
