@@ -12,6 +12,19 @@ export interface FindPagesApiResponseInterface extends ApiResponseInterface {
   data?: PageInterface;
 }
 
+export interface FindPagesInputParameters
+  extends ClientConfigInterface,
+    OptionalFindInputParameters {}
+
+export interface OptionalFindInputParameters {
+  criteria?: 'ascending' | 'descending';
+  from?: string;
+  limit?: number;
+  skip?: number;
+  sort?: string;
+  to?: string;
+}
+
 export interface PageInterface {
   _id: string;
   accountId: string;

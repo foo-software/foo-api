@@ -1,15 +1,17 @@
 import fetch from 'node-fetch';
 import { LATEST_API_URL } from './constants';
+import { getQueryString } from './helpers';
 import {
-  ClientConfigInterface,
   FindPagesApiResponseInterface,
+  FindPagesInputParameters,
 } from './interfaces';
 
 export default async ({
   apiToken,
   apiUrl = LATEST_API_URL,
-}: ClientConfigInterface): Promise<FindPagesApiResponseInterface> => {
-  const result = await fetch(`${apiUrl}/pages`, {
+  ...parameters
+}: FindPagesInputParameters): Promise<FindPagesApiResponseInterface> => {
+  const result = await fetch(`${apiUrl}/pages${getQueryString(parameters)}`, {
     method: 'get',
     headers: {
       authorization: apiToken,

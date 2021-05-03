@@ -2,6 +2,7 @@ import findPages from './findPages';
 import {
   ClientConfigInterface,
   FindPagesApiResponseInterface,
+  OptionalFindInputParameters,
 } from './interfaces';
 import { LATEST_API_URL } from './constants';
 
@@ -14,10 +15,13 @@ export default class ApiClient {
     this.apiUrl = apiUrl;
   }
 
-  async findPages(): Promise<FindPagesApiResponseInterface> {
+  async findPages(
+    parameters: OptionalFindInputParameters
+  ): Promise<FindPagesApiResponseInterface> {
     return findPages({
       apiToken: this.apiToken,
       apiUrl: this.apiUrl,
+      ...parameters,
     });
   }
 }
