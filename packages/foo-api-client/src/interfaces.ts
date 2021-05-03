@@ -14,6 +14,10 @@ export interface CreatePagePayloadInterface {
   url: string;
 }
 
+export interface CreatePageQueueItemPayloadInterface {
+  tag?: string;
+}
+
 type DeviceType = 'desktop' | 'mobile';
 
 export interface FindPagesParameters
@@ -30,10 +34,10 @@ export interface OptionalFindParameters {
 }
 
 export interface PageInterface {
-  _id: string;
   accountId: string;
   createdAt: string;
   device: DeviceType;
+  id: string;
   name: string;
   url: string;
 }
