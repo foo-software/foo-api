@@ -1,0 +1,25 @@
+name: Test API Client
+on:
+  pull_request:
+    branches:
+      - master
+    paths: [
+      "packages/foo-api-client/**"
+    ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          scope: '@foo-software'
+      - name: Install
+        run: |
+          cd packages/foo-api-client
+          npm install
+      - name: Test
+        run: npm run test
