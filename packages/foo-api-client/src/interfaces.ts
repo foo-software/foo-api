@@ -49,3 +49,13 @@ export interface PageApiResponseInterface extends ApiResponseInterface {
 export interface PagesApiResponseInterface extends ApiResponseInterface {
   data?: PageInterface[];
 }
+
+export interface UpdatePagePayloadInterface {
+  device?: DeviceType;
+  name?: string;
+  url?: string;
+}
+
+export interface UpdatePageParameters extends ClientConfigInterface {
+  payload: UpdatePagePayloadInterface;
+}

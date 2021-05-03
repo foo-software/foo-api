@@ -1,11 +1,13 @@
 import createPage from './createPage';
 import findPages from './findPages';
+import updatePage from './updatePage';
 import {
   ClientConfigInterface,
   CreatePagePayloadInterface,
   OptionalFindParameters,
   PageApiResponseInterface,
   PagesApiResponseInterface,
+  UpdatePagePayloadInterface,
 } from './interfaces';
 import { LATEST_API_URL } from './constants';
 
@@ -35,6 +37,16 @@ export default class ApiClient {
       apiToken: this.apiToken,
       apiUrl: this.apiUrl,
       ...parameters,
+    });
+  }
+
+  async updatePage(
+    payload: UpdatePagePayloadInterface
+  ): Promise<PageApiResponseInterface> {
+    return updatePage({
+      apiToken: this.apiToken,
+      apiUrl: this.apiUrl,
+      payload,
     });
   }
 }
