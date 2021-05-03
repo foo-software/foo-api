@@ -3,14 +3,14 @@ import { LATEST_API_URL } from './constants';
 import { getQueryString } from './helpers';
 import {
   FindPagesApiResponseInterface,
-  FindPagesInputParameters,
+  FindPagesParameters,
 } from './interfaces';
 
 export default async ({
   apiToken,
   apiUrl = LATEST_API_URL,
   ...parameters
-}: FindPagesInputParameters): Promise<FindPagesApiResponseInterface> => {
+}: FindPagesParameters): Promise<FindPagesApiResponseInterface> => {
   const result = await fetch(`${apiUrl}/pages${getQueryString(parameters)}`, {
     method: 'get',
     headers: {
