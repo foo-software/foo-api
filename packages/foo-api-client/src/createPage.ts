@@ -1,12 +1,18 @@
 import fetch from 'node-fetch';
 import { LATEST_API_URL } from './constants';
-import { CreatePageParameters, PageApiResponseInterface } from './interfaces';
+import {
+  ClientConfigInterface,
+  CreatePagePayloadInterface,
+  PageApiResponseInterface,
+} from './interfaces';
 
 export default async ({
-  apiToken,
-  apiUrl = LATEST_API_URL,
+  parameters: { apiToken, apiUrl = LATEST_API_URL },
   payload,
-}: CreatePageParameters): Promise<PageApiResponseInterface> => {
+}: {
+  parameters: ClientConfigInterface;
+  payload: CreatePagePayloadInterface;
+}): Promise<PageApiResponseInterface> => {
   const result = await fetch(`${apiUrl}/pages`, {
     method: 'post',
     headers: {

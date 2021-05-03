@@ -14,10 +14,6 @@ export interface CreatePagePayloadInterface {
   url: string;
 }
 
-export interface CreatePageParameters extends ClientConfigInterface {
-  payload: CreatePagePayloadInterface;
-}
-
 type DeviceType = 'desktop' | 'mobile';
 
 export interface FindPagesParameters
@@ -50,12 +46,35 @@ export interface PagesApiResponseInterface extends ApiResponseInterface {
   data?: PageInterface[];
 }
 
+export interface PageParametersBase {
+  id: string;
+}
+
+export interface PageParameters
+  extends ClientConfigInterface,
+    PageParametersBase {}
+
+export interface QueueItemInterface {
+  createdAt: string;
+  id: string;
+  index: number;
+  pageId: string;
+  status: 'available' | 'busy';
+  tag: string;
+  type: string;
+  waitSeconds: string;
+}
+
+export interface QueueItemApiResponseInterface extends ApiResponseInterface {
+  data?: QueueItemInterface;
+}
+
+export interface QueueItemsApiResponseInterface extends ApiResponseInterface {
+  data?: QueueItemInterface[];
+}
+
 export interface UpdatePagePayloadInterface {
   device?: DeviceType;
   name?: string;
   url?: string;
-}
-
-export interface UpdatePageParameters extends ClientConfigInterface {
-  payload: UpdatePagePayloadInterface;
 }

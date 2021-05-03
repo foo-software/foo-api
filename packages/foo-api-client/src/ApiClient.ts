@@ -1,12 +1,13 @@
 import createPage from './createPage';
 import findPages from './findPages';
-import updatePage from './updatePage';
 import removePage from './removePage';
+import updatePage from './updatePage';
 import {
   ClientConfigInterface,
   CreatePagePayloadInterface,
   OptionalFindParameters,
   PageApiResponseInterface,
+  PageParametersBase,
   PagesApiResponseInterface,
   UpdatePagePayloadInterface,
 } from './interfaces';
@@ -21,40 +22,62 @@ export default class ApiClient {
     this.apiUrl = apiUrl;
   }
 
-  async createPage(
-    payload: CreatePagePayloadInterface
-  ): Promise<PageApiResponseInterface> {
+  async createPage({
+    payload,
+  }: {
+    payload: CreatePagePayloadInterface;
+  }): Promise<PageApiResponseInterface> {
     return createPage({
-      apiToken: this.apiToken,
-      apiUrl: this.apiUrl,
+      parameters: {
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
       payload,
     });
   }
 
-  async findPages(
-    parameters: OptionalFindParameters
-  ): Promise<PagesApiResponseInterface> {
+  async findPages({
+    parameters,
+  }: {
+    parameters: OptionalFindParameters;
+  }): Promise<PagesApiResponseInterface> {
     return findPages({
-      apiToken: this.apiToken,
-      apiUrl: this.apiUrl,
-      ...parameters,
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
     });
   }
 
-  async updatePage(
-    payload: UpdatePagePayloadInterface
-  ): Promise<PageApiResponseInterface> {
-    return updatePage({
-      apiToken: this.apiToken,
-      apiUrl: this.apiUrl,
-      payload,
-    });
-  }
-
-  async removePage(): Promise<PageApiResponseInterface> {
+  async removePage({
+    parameters,
+  }: {
+    parameters: PageParametersBase;
+  }): Promise<PageApiResponseInterface> {
     return removePage({
-      apiToken: this.apiToken,
-      apiUrl: this.apiUrl,
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+    });
+  }
+
+  async updatePage({
+    parameters,
+    payload,
+  }: {
+    parameters: PageParametersBase;
+    payload: UpdatePagePayloadInterface;
+  }): Promise<PageApiResponseInterface> {
+    return updatePage({
+      parameters: {
+        ...parameters,
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+      payload,
     });
   }
 }
