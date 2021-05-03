@@ -62,7 +62,7 @@ export interface Opportunity {
   id: string;
   numericValue: number;
   numericUnit?: 'millisecond' | string;
-  rating: 'average' | 'error' | 'pass' | 'fail' | string;
+  rating: 'average' | 'error' | 'fail' | 'pass' | string;
 }
 
 export interface OptionalFindParameters {

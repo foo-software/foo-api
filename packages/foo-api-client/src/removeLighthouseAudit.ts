@@ -4,12 +4,27 @@ import {
   LighthouseAuditApiResponseInterface,
   ResourceParameters,
 } from './interfaces';
+import { getMissingRequiredFieldErrors } from './helpers';
 
 export default async ({
   parameters: { apiToken, apiUrl = LATEST_API_URL, id },
 }: {
   parameters: ResourceParameters;
 }): Promise<LighthouseAuditApiResponseInterface> => {
+  const error = getMissingRequiredFieldErrors({
+    fields: ['apiToken', 'id'],
+    data: {
+      apiToken,
+      id,
+    },
+  });
+
+  if (error) {
+    return {
+      error: `${error}.`,
+    };
+  }
+
   const result = await fetch(`${apiUrl}/lighthouseAudits/${id}`, {
     method: 'delete',
     headers: {

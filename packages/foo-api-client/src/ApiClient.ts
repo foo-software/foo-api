@@ -29,6 +29,10 @@ export default class ApiClient {
   apiUrl?: string;
 
   constructor({ apiToken, apiUrl = LATEST_API_URL }: ClientConfigInterface) {
+    if (!apiToken) {
+      throw Error('API token is missing.');
+    }
+
     this.apiToken = apiToken;
     this.apiUrl = apiUrl;
   }
@@ -95,8 +99,8 @@ export default class ApiClient {
   async findPages({
     parameters,
   }: {
-    parameters: OptionalFindParameters;
-  }): Promise<PagesApiResponseInterface> {
+    parameters?: OptionalFindParameters;
+  } = {}): Promise<PagesApiResponseInterface> {
     return findPages({
       parameters: {
         ...parameters,

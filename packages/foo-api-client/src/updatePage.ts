@@ -5,6 +5,7 @@ import {
   ResourceParameters,
   UpdatePagePayloadInterface,
 } from './interfaces';
+import { getMissingRequiredFieldErrors } from './helpers';
 
 export default async ({
   parameters: { apiToken, apiUrl = LATEST_API_URL, id },
@@ -13,6 +14,20 @@ export default async ({
   parameters: ResourceParameters;
   payload: UpdatePagePayloadInterface;
 }): Promise<PageApiResponseInterface> => {
+  const error = getMissingRequiredFieldErrors({
+    fields: ['apiToken', 'id'],
+    data: {
+      apiToken,
+      id,
+    },
+  });
+
+  if (error) {
+    return {
+      error: `${error}.`,
+    };
+  }
+
   const result = await fetch(`${apiUrl}/pages/${id}`, {
     method: 'put',
     headers: {
