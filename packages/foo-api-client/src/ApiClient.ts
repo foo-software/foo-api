@@ -1,6 +1,7 @@
 import createPage from './createPage';
 import findPages from './findPages';
 import updatePage from './updatePage';
+import removePage from './removePage';
 import {
   ClientConfigInterface,
   CreatePagePayloadInterface,
@@ -47,6 +48,13 @@ export default class ApiClient {
       apiToken: this.apiToken,
       apiUrl: this.apiUrl,
       payload,
+    });
+  }
+
+  async removePage(): Promise<PageApiResponseInterface> {
+    return removePage({
+      apiToken: this.apiToken,
+      apiUrl: this.apiUrl,
     });
   }
 }
