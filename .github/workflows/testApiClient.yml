@@ -8,7 +8,7 @@ on:
     ]
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,4 +22,6 @@ jobs:
           cd packages/foo-api-client
           npm install
       - name: Test
-        run: npm run test
+        run: |
+          cd packages/foo-api-client
+          npm run test
