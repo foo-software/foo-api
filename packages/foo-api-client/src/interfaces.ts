@@ -75,7 +75,6 @@ export interface OptionalFindParameters {
 }
 
 export interface PageInterface {
-  accountId: string;
   createdAt: string;
   device: DeviceType;
   id: string;
