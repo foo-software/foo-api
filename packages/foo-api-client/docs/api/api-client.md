@@ -1,6 +1,6 @@
 # Node.js API Client
 
-The API client is a Node.js package to interface with [Foo's REST API](./endpoints) programmatically. The package exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
+The API client is a Node.js package to interface with [Foo's REST API](./endpoints.md) programmatically. The package exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
 
 - [Endpoints](./endpoints.md)
 - [API Response](./api-response.md)
@@ -108,7 +108,7 @@ All methods of the API client return an identical response of the corresponding 
 
 ### `findPages`
 
-A promise that communicates with and resolves a response from the [`findPages` endpoint](./endpoints#findpages).
+A promise that communicates with and resolves a response from the [`findPages` endpoint](./endpoints.md#findpages).
 
 ```javascript
 await apiClient.findPages({
@@ -118,7 +118,7 @@ await apiClient.findPages({
 
 ### `createPage`
 
-A promise that communicates with and resolves a response from the [`createPage` endpoint](./endpoints#createpage).
+A promise that communicates with and resolves a response from the [`createPage` endpoint](./endpoints.md#createpage).
 
 ```javascript
 await apiClient.createPage({
@@ -128,7 +128,7 @@ await apiClient.createPage({
 
 ### `updatePage`
 
-A promise that communicates with and resolves a response from the [`updatePage` endpoint](./endpoints#updatepage).
+A promise that communicates with and resolves a response from the [`updatePage` endpoint](./endpoints.md#updatepage).
 
 ```javascript
 await apiClient.updatePage({
@@ -139,7 +139,7 @@ await apiClient.updatePage({
 
 ### `removePage`
 
-A promise that communicates with and resolves a response from the [`removePage` endpoint](./endpoints#removepage).
+A promise that communicates with and resolves a response from the [`removePage` endpoint](./endpoints.md#removepage).
 
 ```javascript
 await apiClient.removePage({
@@ -149,7 +149,7 @@ await apiClient.removePage({
 
 ### `findPageQueueItems`
 
-A promise that communicates with and resolves a response from the [`findPageQueueItems` endpoint](./endpoints#findpagequeueitems).
+A promise that communicates with and resolves a response from the [`findPageQueueItems` endpoint](./endpoints.md#findpagequeueitems).
 
 ```javascript
 await apiClient.findPageQueueItems({
@@ -159,7 +159,7 @@ await apiClient.findPageQueueItems({
 
 ### `createPageQueueItem`
 
-A promise that communicates with and resolves a response from the [`createPageQueueItem` endpoint](./endpoints#createpagequeueitem).
+A promise that communicates with and resolves a response from the [`createPageQueueItem` endpoint](./endpoints.md#createpagequeueitem).
 
 ```javascript
 await apiClient.createPageQueueItem({
@@ -170,7 +170,7 @@ await apiClient.createPageQueueItem({
 
 ### `findPageLighthouseAudits`
 
-A promise that communicates with and resolves a response from the [`findPageLighthouseAudits` endpoint](./endpoints#findpagelighthouseaudits).
+A promise that communicates with and resolves a response from the [`findPageLighthouseAudits` endpoint](./endpoints.md#findpagelighthouseaudits).
 
 ```javascript
 await apiClient.findPageLighthouseAudits({
@@ -180,7 +180,7 @@ await apiClient.findPageLighthouseAudits({
 
 ### `updateLighthouseAudit`
 
-A promise that communicates with and resolves a response from the [`updateLighthouseAudit` endpoint](./endpoints#updatelighthouseaudit).
+A promise that communicates with and resolves a response from the [`updateLighthouseAudit` endpoint](./endpoints.md#updatelighthouseaudit).
 
 ```javascript
 await apiClient.updateLighthouseAudit({
@@ -191,7 +191,7 @@ await apiClient.updateLighthouseAudit({
 
 ### `removeLighthouseAudit`
 
-A promise that communicates with and resolves a response from the [`removeLighthouseAudit` endpoint](./endpoints#removelighthouseaudit).
+A promise that communicates with and resolves a response from the [`removeLighthouseAudit` endpoint](./endpoints.md#removelighthouseaudit).
 
 ```javascript
 await apiClient.removeLighthouseAudit({
