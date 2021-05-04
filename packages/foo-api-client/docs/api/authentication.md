@@ -16,5 +16,5 @@ curl -X GET "https://www.foo.software/api/v2/pages" \
 
 To acquire an API token, simply follow the steps below.
 
-- If you don't have an account with, [register with Foo here](https://www.foo.software/register).
+- If you don't have an account, [register with Foo here](https://www.foo.software/register).
 - Navigate to the [account page on Foo](https://www.foo.software/account). On this page, you should see your API token. This token exists at the account level and is only accessible by [account users who have access](https://www.foo.software/users).
