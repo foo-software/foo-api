@@ -20,7 +20,7 @@ interface Opportunity {
 Opportunities are load opportunities from the performance category exposed in the resulting JSON response from Lighthouse audits and consumed by [Lighthouse's report renderer](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/report/html/renderer/performance-category-renderer.js) to display "opportunities" in the generated HTML report. It maps `id` fields to [audit definitions](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits). The `rating` field is what determines the color of bars seen in the "opportunities" section of the HTML report and reflects the opporunity impact.
 
 <figure>
-  <img src="opportunities.png" alt="Lighthouse HTML report - opportunities" width="800" height="333">
+  <img src="../images/opportunities.png" alt="Lighthouse HTML report - opportunities" width="800" height="333">
   <figcaption>
     Opportunities section of a Lighthouse generated report
   </figcaption>
