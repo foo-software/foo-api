@@ -19,6 +19,23 @@ interface Opportunity {
 
 Opportunities are exposed in the resulting JSON response from Lighthouse audits and consumed by [Lighthouse's report renderer](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/report/html/renderer/performance-category-renderer.js) to display "opportunities" in the generated HTML report. It maps `id` fields to [audit definitions](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits). The `rating` field is what determines the color of bars seen in the "opportunities" section of the HTML report and reflects the opporunity impact.
 
+<figure>
+  <img src="opportunities.png" alt="Lighthouse Opportunities" width="800" height="333">
+  <figcaption>
+    Opportunities section of a Lighthouse generated report
+  </figcaption>
+</figure>
+
+In the above report, the first corresponding opportunity looks like the below.
+
+```json
+{
+  "id": "offscreen-images",
+  "numericValue": 3450,
+  "rating": "fail"
+}
+```
+
 #### Device
 
 ```typescript
