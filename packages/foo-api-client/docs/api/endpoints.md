@@ -10,7 +10,7 @@ Foo exposes a public REST API for management of pages to be audited by Lighthous
 
 ## Page Endpoints
 
-Below are endpoints for managing [`Page` resources](./resources#page).
+Below are endpoints for managing [`Page` resources](./resources.md#page).
 
 ### `findPages`
 
@@ -61,7 +61,7 @@ Creates a new page associated with the authenticated account.
 
 #### `createPage` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#post). For details about what each field means, see [`Page` resource documentation](./resources#page).
+The below fields should populate the [request body as documented](./rest-methods.md#post). For details about what each field means, see [`Page` resource documentation](./resources.md#page).
 
 ```typescript
 interface Payload {
@@ -109,7 +109,7 @@ interface Parameters {
 
 #### `updatePage` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#put). For details about what each field means, see [`Page` resource documentation](./resources#page).
+The below fields should populate the [request body as documented](./rest-methods.md#put). For details about what each field means, see [`Page` resource documentation](./resources.md#page).
 
 ```typescript
 interface Payload {
@@ -177,7 +177,7 @@ Note: the below response represents the page that was deleted.
 
 ## Queue Endpoints
 
-Below are endpoints for managing [`QueueItem` resources](./resources#queueitem).
+Below are endpoints for managing [`QueueItem` resources](./resources.md#queueitem).
 
 ### `findPageQueueItems`
 
