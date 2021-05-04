@@ -18,7 +18,7 @@ Below are endpoints for managing [`Page` resources](./resources.md#page).
 GET https://www.foo.software/api/v2/pages
 ```
 
-Returns a collection pages belonging to the authenticated account.
+Returns a collection of pages belonging to the authenticated account.
 
 #### `findPages` Parameters
 
@@ -250,7 +250,7 @@ interface Parameters {
 
 #### `createPageQueueItem` Payload
 
-The below fields should populate the [request body as documented](./rest-methods.md#post). For details about what each field means, see [`Page` resource documentation](./resources.md#page).
+The below fields should populate the [request body as documented](./rest-methods.md#post). For details about what each field means, see [`QueuItem` resource documentation](./resources.md#queueitem).
 
 ```typescript
 interface Payload {
