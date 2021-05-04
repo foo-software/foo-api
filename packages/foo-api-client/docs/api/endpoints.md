@@ -465,7 +465,7 @@ DELETE https://www.foo.software/api/v2/lighthouseAudits/:id
 
 Removes a Lighthouse audit by `id` belonging to the authenticated account.
 
-#### `removePage` Parameters
+#### `removeLighthouseAudit` Parameters
 
 The below parameters are "path" parameters.
 
