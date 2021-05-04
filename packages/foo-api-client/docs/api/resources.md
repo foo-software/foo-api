@@ -116,7 +116,7 @@ Foo manages a queue of Lighthouse audits to run on a group of pods within a clus
 
 #### `QueueItem`: Important Characteristics
 
-- **`index`** represents the number in the queue order of an item. `1` means the item is next in line while `0` means a queue item is currently being audited by Lighthouse. If there are 25 items in the queue and `index` of `24` would mean that item is last.
+- **`index`** represents the number in the queue order of an item. `1` means the item is next in line while `0` means a queue item is currently being audited by Lighthouse. If there are 25 items in the queue an `index` of `24` would mean that item is last.
 - **`pageId`** is the `id` of a page enqueued to be Lighthouse audited.
 - **`status`** is the queue status. `available` is the value of `status` when a page is waiting to be Lighthouse audited and `busy` when an audit is in progress.
 - **`tag`** is a user-defined or auto-generated string to describe the specific Lighthouse audit. On Foo users can tag an audit and can also do so via the API. This tag is transmitted to the resulting `LighthouseAudit` resource.
