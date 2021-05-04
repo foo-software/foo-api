@@ -93,12 +93,12 @@ export interface PagesApiResponseInterface extends ApiResponseInterface {
 export interface QueueItemInterface {
   createdAt: string;
   id: string;
-  index: number;
+  index?: number;
   pageId: string;
   status: 'available' | 'busy';
   tag: string;
   type: string;
-  waitSeconds: string;
+  waitSeconds?: string;
 }
 
 export interface QueueItemApiResponseInterface extends ApiResponseInterface {

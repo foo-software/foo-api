@@ -57,7 +57,7 @@ Supports all [common optional parameters](./parameters.md) as query parameters.
 POST https://www.foo.software/api/v2/pages
 ```
 
-Creates a new page associated with the authenticated account.
+Creates a new page belonging to the authenticated account.
 
 #### `createPage` Payload
 
@@ -95,7 +95,7 @@ interface Payload {
 PUT https://www.foo.software/api/v2/pages/:id
 ```
 
-Updates a page by `id` associated with the authenticated account.
+Updates a page by `id` belonging to the authenticated account.
 
 #### `updatePage` Parameters
 
@@ -143,7 +143,7 @@ interface Payload {
 DELETE https://www.foo.software/api/v2/pages/:id
 ```
 
-Removes a page by `id` associated with the authenticated account.
+Removes a page by `id` belonging to the authenticated account.
 
 #### `removePage` Parameters
 
@@ -185,11 +185,89 @@ Below are endpoints for managing [`QueueItem` resources](./resources.md#queueite
 GET https://www.foo.software/api/v2/pages/:id/queueItems
 ```
 
+Returns all queue items for a page (by page `id`) belonging to the authenticated account.
+
+Note: this endpoint does not support [common optional parameters](./parameters.md) as it returns data from an ephemeral storage and will never return large amounts of data to justify sorting, paginating, etc.
+
+#### `findPageQueueItems` Example Response
+
+<details>
+  <summary>Example</summary>
+  
+```json
+{
+  "data" : [
+    {
+      "createdAt" : "2021-05-04T21:15:10.499Z",
+      "id" : "1620162910499-5aad2db2-1ad3-4556-b043-987e6fccf423",
+      "index" : 0,
+      "pageId" : "608ef83194f4a905853256f3",
+      "tag" : "PR #1",
+      "type" : "lighthouseAudit",
+      "waitSeconds" : 30
+    },
+    {
+      "createdAt" : "2021-05-04T21:15:10.499Z",
+      "id" : "1620162936866-8cec2bd7-5d69-40c8-a0b8-a5cc33ba16a3",
+      "index" : 1,
+      "pageId" : "608ef83194f4a905853256f3",
+      "tag" : "PR #2",
+      "type" : "lighthouseAudit",
+      "waitSeconds" : 40
+    }
+  ]
+}
+```
+</details>
+
 ### `createPageQueueItem`
 
 ```
 POST https://www.foo.software/api/v2/pages/:id/queueItems
 ```
+
+Adds a new item to the queue for a page (by page `id`) belonging to the authenticated account.
+
+#### `createPageQueueItem` Parameters
+
+The below parameters are "path" parameters.
+
+```typescript
+interface Parameters {
+  id: string;
+}
+```
+
+#### `createPageQueueItem` Payload
+
+The below fields should populate the [request body as documented](./rest-methods.md#post). For details about what each field means, see [`Page` resource documentation](./resources.md#page).
+
+```typescript
+interface Payload {
+  tag?: string;
+}
+```
+
+#### `createPageQueueItem` Example Response
+
+Note the `index` and `waitSeconds` fields are calculated after creation and are therefore not available in the `createPageQueueItem` response.
+
+<details>
+  <summary>Example</summary>
+  
+```json
+{
+  "data" : {
+    "createdAt" : "2021-05-04T21:15:36.866Z",
+    "id" : "1620162936866-8cec2bd7-5d69-40c8-a0b8-a5cc33ba16a3",
+    "pageId" : "608ef83194f4a905853256f3",
+    "status" : "available",
+    "tag" : "PR #2",
+    "type" : "lighthouseAudit"
+  }
+}
+```
+</details>
 
 ### `findPageLighthouseAudits`
 
