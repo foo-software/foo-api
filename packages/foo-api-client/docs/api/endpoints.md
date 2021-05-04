@@ -53,8 +53,22 @@ Supports all [common optional parameters](./parameters.md) as query parameters.
 
 ### `createPage`
 
+Creates a new page associated with the authenticated account.
+
 ```
 POST https://www.foo.software/api/v2/pages
+```
+
+#### `createPage` Payload
+
+The below fields should populate the [request body as documented](./rest-methods#post). For details about what each field means, see [`Page` resource documentation](./resources#page).
+
+```typescript
+interface CreatePagePayload {
+  device?: DeviceType;
+  name: string;
+  url: string;
+}
 ```
 
 ### `updatePage`
