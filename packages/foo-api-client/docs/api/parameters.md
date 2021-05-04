@@ -1,6 +1,6 @@
 # Parameters
 
-API methods that are "read-only" will typically support the following optional parameters. In the REST API these are query parameters. Below is a TypeScript representation useful for [Foo's Node.js API client](./api-client.md).
+API methods that are "read-only" and return an array of data will typically support the following optional parameters. In the REST API these are query parameters. Below is a TypeScript representation useful for [Foo's Node.js API client](./api-client.md).
 
 ```typescript
 interface Parameters {
