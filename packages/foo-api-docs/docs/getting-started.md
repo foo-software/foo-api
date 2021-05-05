@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started
 
-[Foo](https://www.foo.software) provides a provides a [REST API](./api/endpoints) and a corresponding [Node.js API client](./api/api-client) to manage pages and Lighthouse audits programmatically which is what this project is all about!
+[Foo](https://www.foo.software) provides a provides a [REST API](./api/endpoints) and a corresponding [Node.js API client](./api-client) to manage pages and Lighthouse audits programmatically which is what this project is all about!
 
 - Create an account on [Foo](https://www.foo.software/register). You can create a basic account for free and even use the API!
 - Add "pages" via [Foo's dashboard](https://www.foo.software/register) to run Lighthouse against.
