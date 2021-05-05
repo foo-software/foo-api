@@ -4,6 +4,7 @@ on:
     branches:
       - master
     paths:
+      - '.github/workflows/deployDocs.yml'
       - 'packages/foo-api-docs/**'
 
 jobs:
@@ -34,5 +35,4 @@ jobs:
       - name: Deploy
         run: |
           cd packages/foo-api-docs
-          ls build
           npm run deploy:s3
