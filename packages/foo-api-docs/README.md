@@ -26,8 +26,15 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+npm run deploy:s3
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+But the correct settings for [`@foo-software/s3-directory-sync-cli`](https://github.com/foo-software/s3-directory-sync-cli) need to be configured. Refer to the [.github/workflows/deployDocs.yml](../../.github/workflows/deployDocs.yml) for a better understanding.
+
+Deploys occur automaticlly with every commit to `master`. The CI pipeline does the following when commits with changes in the `deployDocs.yml` occur or in this package.
+
+- `npm run build`
+- Deploys all static files from `build` directory to AWS S3 via [`@foo-software/s3-directory-sync-cli`](https://github.com/foo-software/s3-directory-sync-cli).
+
+This follows [docs from AWS to enable static websites on a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html) and [support custom domains via Route 53](https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html).
