@@ -1,6 +1,6 @@
 # Node.js API Client
 
-The API client is a Node.js package to interface with [Foo's REST API](./endpoints.md) programmatically. The package exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
+The API client is a Node.js package to interface with [Foo's REST API](./endpoints.md) programmatically. This package is [hosted on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client) and exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
 
 - [Endpoints](./endpoints.md)
 - [API Response](./api-response.md)

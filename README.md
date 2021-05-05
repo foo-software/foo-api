@@ -6,7 +6,7 @@ This is a monorepo providing NPM packages for Foo's public API and documentation
 
 ## Packages
 
-- [`@foo-software/foo-api-client`](packages/foo-api-client): An API client to communicate with Foo's REST API endpoints.
+- [`@foo-software/foo-api-client`](packages/foo-api-client): An API client to communicate with Foo's REST API endpoints. Find it [on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client).
 
 ## Documentation
 
