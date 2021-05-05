@@ -18,6 +18,10 @@ Install the API client in your project.
 npm install @foo-software/foo-api-client
 ```
 
+## TypeScript
+
+We use `tsc` to generate types and if you use TypeScript, you may need to match our TypeScript version if you have build errors. Check our [`package.json`](https://github.com/foo-software/foo-api/blob/master/packages/foo-api-client/package.json) to find our TypeScript version.
+
 ## Example Usage
 
 Below illustrates an example of a variety of methods from the API client.
