@@ -16,7 +16,7 @@ jobs:
       S3_DIRECTORY_SYNC_SECRET_ACCESS_KEY: ${{ secrets.S3_DIRECTORY_SYNC_SECRET_ACCESS_KEY }}
       S3_DIRECTORY_SYNC_LOCAL_DIRECTORY: ${{ secrets.S3_DIRECTORY_SYNC_LOCAL_DIRECTORY }}
       S3_DIRECTORY_SYNC_PROGRESS: false
-      S3_DIRECTORY_SYNC_STRICT: ${{ secrets.S3_DIRECTORY_SYNC_STRICT }}
+      S3_DIRECTORY_SYNC_STRICT: true
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
