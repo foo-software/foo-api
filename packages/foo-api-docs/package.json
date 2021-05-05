@@ -54,6 +54,6 @@
     ]
   },
   "devDependencies": {
-    "@foo-software/s3-directory-sync-cli": "^1.0.0"
+    "@foo-software/s3-directory-sync-cli": "^1.0.1"
   }
 }
