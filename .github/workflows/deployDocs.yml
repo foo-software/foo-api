@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'packages/foo-api-docs/**'
 
 jobs:
   deploy:
