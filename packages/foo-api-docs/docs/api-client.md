@@ -14,7 +14,7 @@ The API client is a Node.js package to interface with [Foo's REST API](./api/end
 
 ## Getting Started
 
-Follow the steps in [getting started](./api/getting-started) and make sure you have an `apiToken` as outlined in that section.
+Follow the steps in [getting started](./getting-started) and make sure you have an `apiToken` as outlined in that section.
 
 Install the API client in your project.
 
