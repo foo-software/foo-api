@@ -49,8 +49,16 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Documentation',
+              label: 'Getting Started',
               to: '/docs/getting-started',
+            },
+            {
+              label: 'REST API',
+              to: '/docs/api/endpoints',
+            },
+            {
+              label: 'Node.js API Client',
+              to: '/docs/api/api-client',
             },
           ],
         },
