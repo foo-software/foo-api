@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy Docs
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
       - 'packages/foo-api-docs/**'
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
     env:
       S3_DIRECTORY_SYNC_ACCESS_KEY_ID: ${{ secrets.S3_DIRECTORY_SYNC_ACCESS_KEY_ID }}
