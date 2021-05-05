@@ -33,4 +33,5 @@ jobs:
       - name: Deploy
         run: |
           cd packages/foo-api-docs
+          ls build
           npm run deploy:s3
