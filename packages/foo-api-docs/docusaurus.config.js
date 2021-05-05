@@ -58,7 +58,7 @@ module.exports = {
             },
             {
               label: 'Node.js API Client',
-              to: '/docs/api/api-client',
+              to: '/docs/api-client',
             },
           ],
         },
