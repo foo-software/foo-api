@@ -95,6 +95,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Foo. Built with Docusaurus.`,
     },
+    gtag: {
+      trackingID: 'UA-137839001-3',
+    },
   },
   presets: [
     [
