@@ -6,15 +6,15 @@ sidebar_position: 1
 
 Foo exposes a public REST API for management of pages on to be audited by Lighthouse. Before proceeding you may want to first read the below sections.
 
-- [API Response](./api-response)
-- [Authentication](./authentication)
-- [Parameters](./parameters)
-- [Resources](./resources)
-- [REST Methods](./rest-methods)
+- [API Response](/docs/api/api-response)
+- [Authentication](/docs/api/authentication)
+- [Parameters](/docs/api/parameters)
+- [Resources](/docs/api/resources)
+- [REST Methods](/docs/api/rest-methods)
 
 ## Page Endpoints
 
-Below are endpoints for managing [`Page` resources](./resources#page).
+Below are endpoints for managing [`Page` resources](/docs/api/resources#page).
 
 ### `findPages`
 
@@ -26,7 +26,7 @@ Returns a collection of pages belonging to the authenticated account.
 
 #### `findPages` Parameters
 
-Supports all [common optional parameters](./parameters) as query parameters.
+Supports all [common optional parameters](/docs/api/parameters) as query parameters.
 
 #### `findPages` Example Response
 
@@ -61,7 +61,7 @@ Creates a new page belonging to the authenticated account.
 
 #### `createPage` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#post). For details about what each field means, see [`Page` resource documentation](./resources#page).
+The below fields should populate the [request body as documented](/docs/api/rest-methods#post). For details about what each field means, see [`Page` resource documentation](/docs/api/resources#page).
 
 ```typescript
 interface Payload {
@@ -105,7 +105,7 @@ interface Parameters {
 
 #### `updatePage` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#put). For details about what each field means, see [`Page` resource documentation](./resources#page).
+The below fields should populate the [request body as documented](/docs/api/rest-methods#put). For details about what each field means, see [`Page` resource documentation](/docs/api/resources#page).
 
 ```typescript
 interface Payload {
@@ -165,7 +165,7 @@ Note: the below response represents the page that was deleted.
 
 ## Queue Endpoints
 
-Below are endpoints for managing [`QueueItem` resources](./resources#queueitem).
+Below are endpoints for managing [`QueueItem` resources](/docs/api/resources#queueitem).
 
 ### `findPageQueueItems`
 
@@ -185,7 +185,7 @@ interface Parameters {
 }
 ```
 
-Note: this endpoint does not support [common optional parameters](./parameters) as it returns data from an ephemeral storage and will never return large amounts of data to justify sorting, paginating, etc.
+Note: this endpoint does not support [common optional parameters](/docs/api/parameters) as it returns data from an ephemeral storage and will never return large amounts of data to justify sorting, paginating, etc.
 
 #### `findPageQueueItems` Example Response
 
@@ -234,7 +234,7 @@ interface Parameters {
 
 #### `createPageQueueItem` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#post). For details about what each field means, see [`QueuItem` resource documentation](./resources#queueitem).
+The below fields should populate the [request body as documented](/docs/api/rest-methods#post). For details about what each field means, see [`QueuItem` resource documentation](/docs/api/resources#queueitem).
 
 ```typescript
 interface Payload {
@@ -261,7 +261,7 @@ Note the `index` and `waitSeconds` fields are calculated after creation and are 
 
 ## Lighthouse Audit Endpoints
 
-Below are endpoints for managing [`LighthouseAudit` resources](./resources#lighthouseaudit).
+Below are endpoints for managing [`LighthouseAudit` resources](/docs/api/resources#lighthouseaudit).
 
 ### `findPageLighthouseAudits`
 
@@ -273,7 +273,7 @@ Returns a collection of Lighthouse audits for a page (by page `id`) belonging to
 
 #### `findPageLighthouseAudits` Parameters
 
-Supports all [common optional parameters](./parameters) as query parameters. The below parameters are "path" parameters. `id` is for the page.
+Supports all [common optional parameters](/docs/api/parameters) as query parameters. The below parameters are "path" parameters. `id` is for the page.
 
 ```typescript
 interface Parameters {
@@ -382,7 +382,7 @@ interface Parameters {
 
 #### `updateLighthouseAudit` Payload
 
-The below fields should populate the [request body as documented](./rest-methods#put). For details about what each field means, see [`LighthouseAudit` resource documentation](./resources#lighthouseaudit).
+The below fields should populate the [request body as documented](/docs/api/rest-methods#put). For details about what each field means, see [`LighthouseAudit` resource documentation](/docs/api/resources#lighthouseaudit).
 
 ```typescript
 interface Payload {

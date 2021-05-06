@@ -4,17 +4,17 @@ sidebar_position: 3
 
 # Node.js API Client
 
-The API client is a Node.js package to interface with [Foo's REST API](./api/endpoints) programmatically. This package is [hosted on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client) and exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
+The API client is a Node.js package to interface with [Foo's REST API](/docs/api/endpoints) programmatically. This package is [hosted on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client) and exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
 
-- [Endpoints](./api/endpoints)
-- [API Response](./api/api-response)
-- [Authentication](./api/authentication)
-- [Parameters](./api/parameters)
-- [Resources](./api/resources)
+- [Endpoints](/docs/api/endpoints)
+- [API Response](/docs/api/api-response)
+- [Authentication](/docs/api/authentication)
+- [Parameters](/docs/api/parameters)
+- [Resources](/docs/api/resources)
 
 ## Getting Started
 
-Follow the steps in [getting started](./getting-started) and make sure you have an `apiToken` as outlined in that section.
+Follow the steps in [getting started](/docs/getting-started) and make sure you have an `apiToken` as outlined in that section.
 
 Install the API client in your project.
 
@@ -112,11 +112,11 @@ const client = new ApiClient({
 
 ## Methods
 
-All methods of the API client return an identical response of the corresponding endpoint. All endpoints respond with a consistent shape as described in the [API Response section](./api/api-response).
+All methods of the API client return an identical response of the corresponding endpoint. All endpoints respond with a consistent shape as described in the [API Response section](/docs/api/api-response).
 
 ### `findPages`
 
-A promise that communicates with and resolves a response from the [`findPages` endpoint](./api/endpoints#findpages).
+A promise that communicates with and resolves a response from the [`findPages` endpoint](/docs/api/endpoints#findpages).
 
 ```javascript
 await apiClient.findPages({
@@ -126,7 +126,7 @@ await apiClient.findPages({
 
 ### `createPage`
 
-A promise that communicates with and resolves a response from the [`createPage` endpoint](./api/endpoints#createpage).
+A promise that communicates with and resolves a response from the [`createPage` endpoint](/docs/api/endpoints#createpage).
 
 ```javascript
 await apiClient.createPage({
@@ -136,7 +136,7 @@ await apiClient.createPage({
 
 ### `updatePage`
 
-A promise that communicates with and resolves a response from the [`updatePage` endpoint](./api/endpoints#updatepage).
+A promise that communicates with and resolves a response from the [`updatePage` endpoint](/docs/api/endpoints#updatepage).
 
 ```javascript
 await apiClient.updatePage({
@@ -147,7 +147,7 @@ await apiClient.updatePage({
 
 ### `removePage`
 
-A promise that communicates with and resolves a response from the [`removePage` endpoint](./api/endpoints#removepage).
+A promise that communicates with and resolves a response from the [`removePage` endpoint](/docs/api/endpoints#removepage).
 
 ```javascript
 await apiClient.removePage({
@@ -157,7 +157,7 @@ await apiClient.removePage({
 
 ### `findPageQueueItems`
 
-A promise that communicates with and resolves a response from the [`findPageQueueItems` endpoint](./api/endpoints#findpagequeueitems).
+A promise that communicates with and resolves a response from the [`findPageQueueItems` endpoint](/docs/api/endpoints#findpagequeueitems).
 
 ```javascript
 await apiClient.findPageQueueItems({
@@ -167,7 +167,7 @@ await apiClient.findPageQueueItems({
 
 ### `createPageQueueItem`
 
-A promise that communicates with and resolves a response from the [`createPageQueueItem` endpoint](./api/endpoints#createpagequeueitem).
+A promise that communicates with and resolves a response from the [`createPageQueueItem` endpoint](/docs/api/endpoints#createpagequeueitem).
 
 ```javascript
 await apiClient.createPageQueueItem({
@@ -178,7 +178,7 @@ await apiClient.createPageQueueItem({
 
 ### `findPageLighthouseAudits`
 
-A promise that communicates with and resolves a response from the [`findPageLighthouseAudits` endpoint](./api/endpoints#findpagelighthouseaudits).
+A promise that communicates with and resolves a response from the [`findPageLighthouseAudits` endpoint](/docs/api/endpoints#findpagelighthouseaudits).
 
 ```javascript
 await apiClient.findPageLighthouseAudits({
@@ -188,7 +188,7 @@ await apiClient.findPageLighthouseAudits({
 
 ### `updateLighthouseAudit`
 
-A promise that communicates with and resolves a response from the [`updateLighthouseAudit` endpoint](./api/endpoints#updatelighthouseaudit).
+A promise that communicates with and resolves a response from the [`updateLighthouseAudit` endpoint](/docs/api/endpoints#updatelighthouseaudit).
 
 ```javascript
 await apiClient.updateLighthouseAudit({
@@ -199,7 +199,7 @@ await apiClient.updateLighthouseAudit({
 
 ### `removeLighthouseAudit`
 
-A promise that communicates with and resolves a response from the [`removeLighthouseAudit` endpoint](./api/endpoints#removelighthouseaudit).
+A promise that communicates with and resolves a response from the [`removeLighthouseAudit` endpoint](/docs/api/endpoints#removelighthouseaudit).
 
 ```javascript
 await apiClient.removeLighthouseAudit({
