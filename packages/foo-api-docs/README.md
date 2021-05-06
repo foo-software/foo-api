@@ -53,3 +53,5 @@ Below is a list of steps pulled out of many other steps and mistakes that could 
 - Make sure to update Google Domains by adding the CNAME of the domain from CloudFront. This domain will look something like this: `d137a13jp4duuo.cloudfront.net`.
 - I'm not sure if this was one of the things that made this all work in the end, but I went back to 
 [**ACM (Certificate Manager)**](https://console.aws.amazon.com/acm/home?region=us-east-1) and got the CNAME from there also. It the name is something like `_9fb48b93d42bee633a5acf4f7bc7a5b8.docs.foo.software.` which becomes `_9fb48b93d42bee633a5acf4f7bc7a5b8.docs` when adding to Google Domains and the value looks like `_3ced558c29ffcb032912ae49a7ec14ec.zzxlnyslwt.acm-validations.aws` which I think is the "domain" field but in Google Domains you can add a CNAME with those. Not sure if that was even necessary, but I think it might have been. Everything worked after this.
+
+To invalidate cache via the console [read this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#Invalidation_Requests).
