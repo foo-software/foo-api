@@ -5,6 +5,7 @@ on:
       - master
     paths:
       - 'packages/foo-api-client/**'
+      - 'packages/foo-api-docs/**'
 
 jobs:
   publish:
