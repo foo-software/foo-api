@@ -36,6 +36,11 @@ module.exports = {
           label: 'Node.js API Client',
         },
         {
+          href: 'https://www.foo.software',
+          label: 'Foo',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/foo-software/foo-api',
           label: 'GitHub',
           position: 'right',
