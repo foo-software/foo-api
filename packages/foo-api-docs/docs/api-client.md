@@ -47,7 +47,7 @@ const client = new ApiClient({
   console.log('pages', pages);
 
   // create a new page on Foo
-  const { id } = await client.createPage({
+  const { data: { id } } = await client.createPage({
     payload: {
       name: 'Pricing',
       url: 'https://www.foo.software/pricing'
