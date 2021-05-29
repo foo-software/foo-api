@@ -22,7 +22,7 @@
     "foo-api": "dist/bin/cli.js"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.release.json",
+    "build": "tsc -p tsconfig.release.json && chmod +x dist/bin/cli.js",
     "clean": "rimraf dist",
     "foo-api": "ts-node src/bin/cli.ts",
     "prepare": "npm run clean && npm run build",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import meow from 'meow';
 import displayHelp from '../helpers/displayHelp';
 import displayVersion from '../helpers/displayVersion';
@@ -34,10 +35,18 @@ if (!resources.length) {
 if (command === Command.IMPORT) {
   if (resources[0] === ResourceEnum.PAGES) {
     if (typeof flags.filePath !== 'string') {
-      throw Error('"filePath" is invalid or missing');
+      throw Error('"filePath" flag is invalid or missing');
+    }
+    if (typeof process.env.FOO_API_TOKEN !== 'string') {
+      throw Error('"FOO_API_TOKEN" environment variable is invalid or missing');
     }
     importPagesFromFile({
+      apiToken: process.env.FOO_API_TOKEN,
+      apiUrl: process.env.FOO_API_URL,
+      failOnError: flags.failOnError,
       filePath: flags.filePath,
+      filePathOutput: flags.filePathOutput,
+      silent: flags.silent,
     });
   } else {
     displayHelp();
