@@ -21,7 +21,7 @@ jobs:
           scope: '@foo-software'
       - name: Install
         run: |
-          npm install
+          npm ci
           npm run lerna -- bootstrap --hoist
       - name: Publish Packages
         run: |
