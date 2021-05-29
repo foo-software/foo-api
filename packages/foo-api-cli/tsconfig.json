@@ -1,22 +1,7 @@
 {
+  "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
-    "allowJs": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["DOM", "es6", "esnext.asynciterable"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedParameters": true,
-    "outDir": "./dist",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "target": "es6"
+    "outDir": "./dist"
   },
   "exclude": ["dist", "node_modules"],
   "include": ["**/*.ts"]
