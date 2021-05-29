@@ -1,10 +1,8 @@
-name: Test API Client
+name: Test
 on:
   pull_request:
     branches:
       - master
-    paths:
-      - 'packages/foo-api-client/**'
 
 jobs:
   test:
@@ -18,9 +16,8 @@ jobs:
           scope: '@foo-software'
       - name: Install
         run: |
-          cd packages/foo-api-client
           npm install
+          npm run lerna -- bootstrap --hoist
       - name: Test
         run: |
-          cd packages/foo-api-client
           npm run test

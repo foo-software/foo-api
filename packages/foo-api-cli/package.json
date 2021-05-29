@@ -26,7 +26,7 @@
     "clean": "rimraf dist",
     "foo-api": "ts-node src/bin/cli.ts",
     "prepare": "npm run clean && npm run build",
-    "test": "jest"
+    "test": "echo 'no tests yet'"
   },
   "dependencies": {
     "@foo-software/foo-api-client": "^0.0.18",
