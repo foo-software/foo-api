@@ -21,8 +21,8 @@ jobs:
           scope: '@foo-software'
       - name: Install
         run: |
-          npm install lerna -g
-          lerna bootstrap --hoist
+          npm install
+          npm run lerna -- bootstrap --hoist
       - name: Publish Packages
         run: |
           echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
