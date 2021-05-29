@@ -1,7 +1,8 @@
 import meow from 'meow';
+import displayHelp from '../helpers/displayHelp';
+import displayVersion from '../helpers/displayVersion';
+import importPagesFromFile from '../helpers/importPagesFromFile';
 import ResourceEnum from '../enums/Resource';
-import { displayHelp } from '../helpers/displayHelp';
-import { displayVersion } from '../helpers/displayVersion';
 
 const {
   flags,
@@ -32,7 +33,12 @@ if (!resources.length) {
 
 if (command === Command.IMPORT) {
   if (resources[0] === ResourceEnum.PAGES) {
-    console.log('pages');
+    if (typeof flags.filePath !== 'string') {
+      throw Error('"filePath" is invalid or missing');
+    }
+    importPagesFromFile({
+      filePath: flags.filePath,
+    });
   } else {
     displayHelp();
   }

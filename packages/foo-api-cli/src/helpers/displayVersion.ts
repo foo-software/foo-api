@@ -1,5 +1,7 @@
 import { version } from '../../package.json';
 
-export const displayVersion = () => {
+const displayVersion = () => {
   console.log(version);
 };
+
+export default displayVersion;

@@ -4,9 +4,8 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "target": "es6",
-    "module": "commonjs",
     "lib": ["DOM", "es6", "esnext.asynciterable"],
+    "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -16,7 +15,8 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "target": "es6"
   },
   "exclude": ["dist", "node_modules"],
   "include": ["**/*.ts"]
