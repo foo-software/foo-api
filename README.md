@@ -7,12 +7,15 @@ This is a monorepo providing NPM packages for Foo's public API and documentation
 ## Packages
 
 - [`@foo-software/foo-api-client`](packages/foo-api-client): An API client to communicate with Foo's REST API endpoints. Find it [on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client).
+- [`@foo-software/foo-api-cli`](packages/foo-api): A CLI to communicate with Foo's REST API endpoints. Find it [on NPM](https://www.npmjs.com/package/@foo-software/foo-api-cli).
 
 ## Documentation
 
-- [REST API endpoints](./packages/foo-api-client/docs/api/endpoints.md)
-- [Node.js API client](./packages/foo-api-client/docs/api/api-client.md)
-- [Getting started with Foo and the API](./packages/foo-api-client/docs/api/getting-started.md)
+- [Node.js API client](https://docs.foo.software/docs/api-client)
+- [Getting started with Foo and the API](https://docs.foo.software/docs/getting-started)
+- [API: Resources](https://docs.foo.software/docs/api/resources): This section of documentation details the different types of datasets the API deals with.
+- [API: Endpoints](https://docs.foo.software/docs/api/endpoints): A guide through Foo's various REST API endpoints.
+- [CLI](https://docs.foo.software/docs/api-cli)
 
 ## Credits
 
