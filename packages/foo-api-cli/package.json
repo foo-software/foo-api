@@ -1,0 +1,45 @@
+{
+  "name": "@foo-software/foo-api-cli",
+  "version": "0.0.1",
+  "author": "Adam Henson <adamhenson1979@gmail.com> (https://github.com/adamhenson)",
+  "description": "An API CLI to communicate with Foo's REST API endpoints. Foo provides website quality monitoring with tools such as Lighthouse.",
+  "bugs": {
+    "url": "https://github.com/foo-software/foo-api/issues"
+  },
+  "homepage": "https://github.com/foo-software/foo-api/tree/master/packages/foo-api-cli",
+  "main": "dist/bin/cli.js",
+  "types": "dist/bin/cli.d.ts",
+  "keywords": [
+    "api",
+    "api cli",
+    "npm package",
+    "lighthouse",
+    "REST",
+    "server",
+    "typescript"
+  ],
+  "bin": {
+    "foo-api": "dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "foo-api": "ts-node src/bin/cli.ts",
+    "prepare": "npm run clean && npm run build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@foo-software/foo-api-client": "^0.0.17",
+    "meow": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/meow": "^5.0.0",
+    "@types/node": "^14.0.27",
+    "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.5",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.3"
+  }
+}

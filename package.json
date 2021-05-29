@@ -11,8 +11,10 @@
     "typescript"
   ],
   "scripts": {
-    "lint": "eslint ./packages/**/src --ext .ts,.tsx --cache --fix",
-    "prettier": "prettier --single-quote --write './packages/**/*.{ts,tsx}'"
+    "lerna": "lerna",
+    "lint": "eslint ./packages/**/src --ext .ts,.tsx --cache --fix --no-error-on-unmatched-pattern",
+    "prettier": "prettier --single-quote --write './packages/**/*.{ts,tsx}'",
+    "test": "lerna run test"
   },
   "husky": {
     "hooks": {
