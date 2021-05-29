@@ -36,6 +36,12 @@ module.exports = {
           label: 'Node.js API Client',
         },
         {
+          type: 'doc',
+          docId: 'api-cli',
+          position: 'left',
+          label: 'API CLI',
+        },
+        {
           href: 'https://www.foo.software',
           label: 'Foo',
           position: 'right',

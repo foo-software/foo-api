@@ -8,7 +8,7 @@ sidebar_position: 4
 
 ## Getting Started
 
-Follow the steps in [getting started](/docs/getting-started) and make sure you have an API token as outlined in that section. You will use this token to populate [`FOO_API_TOKEN`](#FOO_API_TOKEN) environment variable.
+Follow the steps in [getting started](/docs/getting-started) and make sure you have an API token as outlined in that section. You will use this token to populate [`FOO_API_TOKEN`](#foo_api_token) environment variable.
 
 Install the CLI. This example installs globally.
 
