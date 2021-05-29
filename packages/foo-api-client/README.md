@@ -10,3 +10,4 @@ This is a curated list of important docs as they relate to the Node.js API clien
 - [Getting Started with Foo](https://docs.foo.software/docs/getting-started): Learn where to start with [Foo](https://www.foo.software) and its API.
 - [API: Resources](https://docs.foo.software/docs/api/resources): This section of documentation details the different types of datasets the API deals with.
 - [API: Endpoints](https://docs.foo.software/docs/api/endpoints): A guide through Foo's various REST API endpoints.
+- [CLI](https://docs.foo.software/docs/api-cli): Learn how to use Foo's CLI exported from this project.
