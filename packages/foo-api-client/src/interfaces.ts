@@ -1,3 +1,18 @@
+export interface AlertBaseInterface {
+  dynamicTemplateData: DynamicTemplateDataType;
+  templateId: string;
+}
+
+export type AlertPayloadInterface = AlertBaseInterface;
+
+export interface AlertResponseDataInterface extends AlertBaseInterface {
+  to: string;
+}
+
+export interface AlertResponseInterface extends ApiResponseInterface {
+  data?: AlertResponseDataInterface;
+}
+
 export interface ApiResponseInterface {
   data?: any;
   error?: string;
@@ -11,6 +26,7 @@ export interface ClientConfigInterface {
 export interface CreatePagePayloadInterface {
   device?: DeviceType;
   name: string;
+  shouldSendEmail?: boolean;
   url: string;
 }
 
@@ -19,6 +35,10 @@ export interface CreatePageQueueItemPayloadInterface {
 }
 
 type DeviceType = 'desktop' | 'mobile';
+
+export interface DynamicTemplateDataType {
+  [key: string]: any;
+}
 
 export interface FindPageLighthouseAuditsParameters
   extends ResourceParametersBase,
