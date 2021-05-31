@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { ApiClient } from '@foo-software/foo-api-client';
+import { EMAIL_TEMPLATE_ID_PAGE_IMPORT } from '../constants';
 
 export default async ({
   apiToken,
@@ -36,6 +37,7 @@ export default async ({
     const { data, error } = await apiClient.createPage({
       payload: {
         name,
+        shouldSendEmail: false,
         url,
       },
     });
@@ -69,6 +71,19 @@ export default async ({
     const fullFilePathOutput = path.resolve(filePathOutput);
     fs.writeFileSync(fullFilePathOutput, output);
   }
+
+  await apiClient.createAlert({
+    payload: {
+      dynamicTemplateData: {
+        errors: errors.length,
+        errorMessages: !errors.length
+          ? 'none'
+          : errors.map((error) => JSON.stringify(error)).join('\n'),
+        successful: completed.length,
+      },
+      templateId: EMAIL_TEMPLATE_ID_PAGE_IMPORT,
+    },
+  });
 
   if (!silent) {
     console.log('[✔️] import complete.');

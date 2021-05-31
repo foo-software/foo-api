@@ -3,7 +3,7 @@ export interface AlertBaseInterface {
   templateId: string;
 }
 
-export type AlertPayloadInterface = AlertBaseInterface
+export type AlertPayloadInterface = AlertBaseInterface;
 
 export interface AlertResponseDataInterface extends AlertBaseInterface {
   to: string;
@@ -26,6 +26,7 @@ export interface ClientConfigInterface {
 export interface CreatePagePayloadInterface {
   device?: DeviceType;
   name: string;
+  shouldSendEmail?: boolean;
   url: string;
 }
 

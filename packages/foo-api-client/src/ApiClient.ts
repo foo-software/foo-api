@@ -1,3 +1,4 @@
+import createAlert from './createAlert';
 import createPage from './createPage';
 import createPageQueueItem from './createPageQueueItem';
 import findPageLighthouseAudits from './findPageLighthouseAudits';
@@ -8,6 +9,8 @@ import removePage from './removePage';
 import updateLighthouseAudit from './updateLighthouseAudit';
 import updatePage from './updatePage';
 import {
+  AlertPayloadInterface,
+  AlertResponseInterface,
   ClientConfigInterface,
   CreatePagePayloadInterface,
   CreatePageQueueItemPayloadInterface,
@@ -35,6 +38,20 @@ export default class ApiClient {
 
     this.apiToken = apiToken;
     this.apiUrl = apiUrl;
+  }
+
+  async createAlert({
+    payload,
+  }: {
+    payload: AlertPayloadInterface;
+  }): Promise<AlertResponseInterface> {
+    return createAlert({
+      parameters: {
+        apiToken: this.apiToken,
+        apiUrl: this.apiUrl,
+      },
+      payload,
+    });
   }
 
   async createPage({
