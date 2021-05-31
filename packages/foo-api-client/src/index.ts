@@ -1,4 +1,5 @@
 export { default as ApiClient } from './ApiClient';
+export { default as createAlert } from './createAlert';
 export { default as createPage } from './createPage';
 export { default as createPageQueueItem } from './createPageQueueItem';
 export { default as findPageLighthouseAudits } from './findPageLighthouseAudits';
