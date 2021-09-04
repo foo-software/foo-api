@@ -1,6 +1,6 @@
 {
   "name": "@foo-software/foo-api-docs",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "author": "Adam Henson <adamhenson1979@gmail.com> (https://github.com/adamhenson)",
   "description": "An API documentation website.",
   "bugs": {
