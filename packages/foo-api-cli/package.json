@@ -1,6 +1,6 @@
 {
   "name": "@foo-software/foo-api-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Adam Henson <adamhenson1979@gmail.com> (https://github.com/adamhenson)",
   "description": "An API CLI to communicate with Foo's REST API endpoints. Foo provides website quality monitoring with tools such as Lighthouse.",
   "bugs": {
@@ -29,7 +29,7 @@
     "test": "echo 'no tests yet'"
   },
   "dependencies": {
-    "@foo-software/foo-api-client": "^0.0.24",
+    "@foo-software/foo-api-client": "^0.0.25",
     "meow": "^7.1.0"
   },
   "devDependencies": {
