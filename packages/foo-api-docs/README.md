@@ -59,5 +59,6 @@ To invalidate cache via the console [read this](https://docs.aws.amazon.com/Amaz
 From the docs above in CloudFront settings to invalidate all of the files in a directory, below are a couple examples:
 
 - `/img/*`
-- `/assets/*`
+- `/assets/css/*`
+- `/assets/js/*`
 - `/docs/api/*`
