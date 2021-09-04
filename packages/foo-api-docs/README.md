@@ -61,4 +61,5 @@ From the docs above in CloudFront settings to invalidate all of the files in a d
 - `/img/*`
 - `/assets/css/*`
 - `/assets/js/*`
+- `/*`
 - `/docs/api/*`
