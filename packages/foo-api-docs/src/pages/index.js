@@ -33,20 +33,17 @@ export default function Home() {
       <Head>
         <script defer src="https://unpkg.com/web-vitals"></script>
         <script>{`
-          const VITALS_ACCOUNT_ID = '613382df759af90024b205e1';
-          const VITALS_URL = 'https://www.foo.software/api/vitals';
-
           function postVitals(metric) {
             const body = JSON.stringify({
-              accountId: VITALS_ACCOUNT_ID,
+              accountId: '613382df759af90024b205e1',
               name: metric.name,
               url: window.location.href,
               value: metric.value,
             });
 
             return (
-              (navigator.sendBeacon && navigator.sendBeacon(VITALS_URL, body)) ||
-              fetch(VITALS_URL, {
+              (navigator.sendBeacon && navigator.sendBeacon('https://www.foo.software/api/vitals', body)) ||
+              fetch('https://www.foo.software/api/vitals', {
                 body,
                 method: 'POST',
                 keepalive: true,
