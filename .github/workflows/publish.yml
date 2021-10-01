@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'packages/foo-api-client/**'
-      - 'packages/foo-api-docs/**'
 
 jobs:
   publish:
