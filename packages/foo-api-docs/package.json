@@ -19,16 +19,17 @@
     "typescript"
   ],
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
     "build": "docusaurus build",
-    "compress-files": "compress-files --directory ./build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "deploy:s3": "s3-directory-sync",
-    "postbuild": "mv build/sitemap.xml build/docs/sitemap.xml && npm run compress-files",
+    "clean": "rimraf build",
     "clear": "docusaurus clear",
+    "compress-files": "compress-files --directory ./build",
+    "deploy": "docusaurus deploy",
+    "docusaurus": "docusaurus",
+    "prepare": "npm run clean && npm run build",
+    "postbuild": "mv build/sitemap.xml build/docs/sitemap.xml && npm run compress-files",
     "serve": "docusaurus serve",
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
@@ -56,7 +57,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@foo-software/s3-directory-sync-cli": "^1.0.2"
-  }
+  "devDependencies": {}
 }
