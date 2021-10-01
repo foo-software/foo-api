@@ -1,6 +1,6 @@
 {
   "name": "@foo-software/foo-api-docs",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "author": "Adam Henson <adamhenson1979@gmail.com> (https://github.com/adamhenson)",
   "description": "An API documentation website.",
   "bugs": {
@@ -36,7 +36,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.75",
     "@docusaurus/preset-classic": "2.0.0-alpha.75",
-    "@foo-software/foo-api-ci-tools": "^0.0.35",
+    "@foo-software/foo-api-ci-tools": "^0.0.36",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
