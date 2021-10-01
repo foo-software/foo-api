@@ -11,11 +11,11 @@ This is a monorepo providing NPM packages for Foo's public API and documentation
 
 ## Documentation
 
-- [Getting started with Foo and the API](https://docs.foo.software/docs/getting-started)
-- [API: Resources](https://docs.foo.software/docs/api/resources)
-- [API: Endpoints](https://docs.foo.software/docs/api/endpoints)
-- [Node.js API client](https://docs.foo.software/docs/api-client)
-- [CLI](https://docs.foo.software/docs/api-cli)
+- [Getting started with Foo and the API](https://www.foo.software/docs)
+- [API: Resources](https://www.foo.software/docs/api/resources)
+- [API: Endpoints](https://www.foo.software/docs/api/endpoints)
+- [Node.js API client](https://www.foo.software/docs/api-client)
+- [CLI](https://www.foo.software/docs/api-cli)
 
 ## Credits
 
