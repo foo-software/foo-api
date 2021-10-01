@@ -18,9 +18,6 @@
     "server",
     "typescript"
   ],
-  "files": [
-    "build"
-  ],
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
