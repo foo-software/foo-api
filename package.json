@@ -11,6 +11,7 @@
     "typescript"
   ],
   "scripts": {
+    "bootstrap": "npm run lerna -- bootstrap --hoist",
     "lerna": "lerna",
     "lint": "eslint ./packages/**/src --ext .ts,.tsx --cache --fix --no-error-on-unmatched-pattern",
     "prettier": "prettier --single-quote --write './packages/**/*.{ts,tsx}'",

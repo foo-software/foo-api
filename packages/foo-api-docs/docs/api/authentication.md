@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Documentation of Foo's API authentication for its page experience testing services
+description: Documentation of Foo's API authentication for its page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # Authentication

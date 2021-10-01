@@ -1,20 +1,23 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const title = `Foo Docs`;
 module.exports = {
-  title: 'Foo Docs',
-  tagline: 'Documentation for automated data tracking to improve your website SEO, performance, user experience and engineering practices.',
-  url: 'https://docs.foo.software',
+  title,
+  tagline: title,
+  url: 'https://www.foo.software',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'docs/img/favicon.ico',
   organizationName: 'foo-software', // Usually your GitHub org/user name.
   projectName: 'foo-api', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Foo Docs',
+      title: 'Docs',
       logo: {
         alt: 'Foo Logo',
-        src: 'img/logo-600x600.png',
+        href: 'https://www.foo.software',
+        src: 'docs/img/logo-600x600.png',
+        target: '_self',
       },
       items: [
         {
@@ -42,11 +45,6 @@ module.exports = {
           label: 'API CLI',
         },
         {
-          href: 'https://www.foo.software',
-          label: 'Foo',
-          position: 'right',
-        },
-        {
           href: 'https://github.com/foo-software/foo-api',
           label: 'GitHub',
           position: 'right',
@@ -61,7 +59,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/getting-started',
+              to: '/docs',
             },
             {
               label: 'REST API',
@@ -95,7 +93,7 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: 'https://www.foo.software/tag/articles/',
+              to: 'https://www.foo.software/posts',
             },
             {
               label: 'GitHub',
@@ -115,12 +113,16 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
             'https://github.com/foo-software/foo-api/tree/master/packages/foo-api-docs',
         },
         blog: {
+          feedOptions: {
+            type: null,
+          },
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:

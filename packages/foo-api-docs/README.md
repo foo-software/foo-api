@@ -26,6 +26,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
+**UPDATE**: The below is no longer true, we now host the docs site as part of Foo at `https://www.foo.software/docs`. Keeping the notes below for future reference.
+
 In order to use the below command, the correct settings for [`@foo-software/s3-directory-sync-cli`](https://github.com/foo-software/s3-directory-sync-cli) need to be configured. Refer to the [.github/workflows/deployDocs.yml](../../.github/workflows/deployDocs.yml) for a better understanding.
 
 ```
@@ -38,6 +40,8 @@ Deploys occur automaticlly with every commit to `master`. The CI pipeline does t
 - Deploys all static files from `build` directory to AWS S3 via [`@foo-software/s3-directory-sync-cli`](https://github.com/foo-software/s3-directory-sync-cli).
 
 ## Static Site Hosting with SSL
+
+**UPDATE**: The below is no longer true, we now host the docs site as part of Foo at `https://www.foo.software/docs`. Keeping the notes below for future reference.
 
 This was a royal pain, but I managed to get this working with a dependency on a few AWS services. Note the domain is managed in Google Domains.
 

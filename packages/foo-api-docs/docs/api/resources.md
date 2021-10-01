@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Documentation of Foo's API resources for its page experience testing services
+description: Documentation of Foo's API resources for its page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # Resources
@@ -24,7 +26,7 @@ interface Opportunity {
 Opportunities are load opportunities from the performance category exposed in the resulting JSON response from Lighthouse audits and consumed by [Lighthouse's report renderer](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/report/html/renderer/performance-category-renderer.js) to display "opportunities" in the generated HTML report. It maps `id` fields to [audit definitions](https://github.com/GoogleChrome/lighthouse/tree/master/lighthouse-core/audits). The `rating` field is what determines the color of bars seen in the "opportunities" section of the HTML report and reflects the opporunity impact.
 
 <figure>
-  <img src="/img/opportunities.png" alt="Lighthouse HTML report - opportunities" />
+  <img src="/docs/img/opportunities.png" alt="Lighthouse HTML report - opportunities" />
   <figcaption>
     Opportunities section of a Lighthouse generated report
   </figcaption>
