@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+slug: /
+title: Documentation of Foo's services for page experience testing services
+description: Getting started with Foo? Learn from our documentation about how to use our services for page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # Getting Started
@@ -11,4 +14,4 @@ sidebar_position: 1
 - Familiarize yourself with the dashboard from above by clicking around and manually triggering Lighthouse audits. By doing this, it might become apparent how Foo runs Lighthouse audits based on pages defined by the user and establishes a queue to do so.
 - Find your API token in your [account page on Foo](https://www.foo.software/account) as you'll need it to [authenticate requests](/docs/api/authentication) with our API.
 
-<img src="/img/wavy-area-chart.png" alt="abstract area charts" />
+<img src="/docs/img/wavy-area-chart.png" alt="abstract area charts" />

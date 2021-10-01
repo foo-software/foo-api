@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+title: Documentation of Foo's API endpoints for its page experience testing services
+description: Documentation of Foo's API endpoints for its page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # Endpoints

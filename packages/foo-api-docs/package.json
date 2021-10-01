@@ -18,13 +18,16 @@
     "server",
     "typescript"
   ],
+  "files": ["build"],
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "compress-files": "compress-files --directory ./build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "deploy:s3": "s3-directory-sync",
+    "postbuild": "mv build/sitemap.xml build/docs/sitemap.xml && npm run compress-files",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -33,6 +36,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.75",
     "@docusaurus/preset-classic": "2.0.0-alpha.75",
+    "@foo-software/foo-api-ci-tools": "^0.0.27",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",

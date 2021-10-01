@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+title: Documentation of Foo's Node.js API CLI for its page experience testing services
+description: Documentation of Foo's Node.js API CLI for its page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # Node.js API Client
@@ -14,7 +16,7 @@ The API client is a Node.js package to interface with [Foo's REST API](/docs/api
 
 ## Getting Started
 
-Follow the steps in [getting started](/docs/getting-started) and make sure you have an `apiToken` as outlined in that section.
+Follow the steps in [getting started](/docs) and make sure you have an `apiToken` as outlined in that section.
 
 Install the API client in your project.
 

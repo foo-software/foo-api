@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+title: Documentation of Foo's API CLI for its page experience testing services
+description: Documentation of Foo's API CLI for its page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
 # API CLI
@@ -8,7 +10,7 @@ sidebar_position: 3
 
 ## Getting Started
 
-Follow the steps in [getting started](/docs/getting-started) and make sure you have an API token as outlined in that section. You will use this token to populate [`FOO_API_TOKEN`](#foo_api_token) environment variable.
+Follow the steps in [getting started](/docs) and make sure you have an API token as outlined in that section. You will use this token to populate [`FOO_API_TOKEN`](#foo_api_token) environment variable.
 
 Install the CLI. This example installs globally.
 
@@ -120,4 +122,4 @@ def456,Foo Home Page,https://www.foo.software
 
 *Required*
 
-Follow the steps in [getting started](/docs/getting-started) to acquire an API token and populate `FOO_API_TOKEN` environment variable with it. This is required for API [authentication](/docs/api/authentication).
+Follow the steps in [getting started](/docs) to acquire an API token and populate `FOO_API_TOKEN` environment variable with it. This is required for API [authentication](/docs/api/authentication).
