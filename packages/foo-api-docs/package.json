@@ -18,6 +18,7 @@
     "server",
     "typescript"
   ],
+  "files": ["build"],
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -26,7 +27,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "deploy:s3": "s3-directory-sync",
-    "postbuild": "npm run compress-files",
+    "postbuild": "mv build/sitemap.xml build/docs/sitemap.xml && npm run compress-files",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
