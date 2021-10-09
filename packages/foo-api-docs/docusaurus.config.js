@@ -12,7 +12,7 @@ module.exports = {
   projectName: 'foo-api', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Docs',
+      title: 'Foo',
       logo: {
         alt: 'Foo Logo',
         href: 'https://www.foo.software',
@@ -24,7 +24,7 @@ module.exports = {
           type: 'doc',
           docId: 'getting-started',
           position: 'left',
-          label: 'Getting Started',
+          label: 'Docs: Getting Started',
         },
         {
           type: 'doc',
