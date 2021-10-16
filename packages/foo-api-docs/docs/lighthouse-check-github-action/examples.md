@@ -6,7 +6,7 @@ description: Documentation of Foo's Lighthouse Check GitHub Action examples for 
 
 # Examples
 
-The Lighthouse Check GitHub Action provides many features, each of which may not be obvious. Each example below should illustrate different available features.
+The Lighthouse Check GitHub Action provides many features. Each example below illustrates different available features.
 
 ## Basic
 

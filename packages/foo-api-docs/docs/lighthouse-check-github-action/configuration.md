@@ -6,7 +6,7 @@ description: Documentation of Foo's Lighthouse Check GitHub Action configuration
 
 # Configuration
 
-GitHub Actions are configured by populating [inputs](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#inputs) consumed by the GitHub Action and utilizing [outputs](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs) provided by the GitHub Action as needed. This section documents Lighthouse Check GitHub Action inputs and outputs.
+GitHub Actions are configured by populating [inputs](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#inputs) consumed by the GitHub Action and utilizing [outputs](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs) provided by the GitHub Action. This section documents Lighthouse Check GitHub Action inputs and outputs.
 
 See [the examples section](/docs/lighthouse-check-github-action/examples) to see the various ways one can configure Lighthouse Check GitHub Action.
 
