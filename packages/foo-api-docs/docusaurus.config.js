@@ -45,6 +45,12 @@ module.exports = {
           label: 'API CLI',
         },
         {
+          type: 'doc',
+          docId: 'lighthouse-check-github-action/intro',
+          position: 'left',
+          label: 'Lighthouse Check GitHub Action',
+        },
+        {
           href: 'https://github.com/foo-software/foo-api',
           label: 'GitHub',
           position: 'right',
@@ -68,6 +74,10 @@ module.exports = {
             {
               label: 'Node.js API Client',
               to: '/docs/api-client',
+            },
+            {
+              label: 'Lighthouse Check GitHub Action',
+              to: '/docs/lighthouse-check-github-action/intro',
             },
           ],
         },
