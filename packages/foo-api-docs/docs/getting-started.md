@@ -5,7 +5,7 @@ title: Documentation of Foo's services for page experience testing services
 description: Getting started with Foo? Learn from our documentation about how to use our services for page experience testing services. Foo provides testing and monitoring services using Lighthouse and Web Vitals.
 ---
 
-# Getting Started
+# Docs: Getting Started
 
 [Foo](https://www.foo.software) provides a provides a [REST API](/docs/api/endpoints) a corresponding [Node.js API client](/docs/api-client) and [CLI](/docs/api-cli) to manage pages and Lighthouse audits programmatically.
 
