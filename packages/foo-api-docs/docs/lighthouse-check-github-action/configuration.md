@@ -93,6 +93,11 @@ An absolute directory path to output report. You can do this an an alternative o
 
 A JSON file with config and option fields to overrides defaults. See [example here](/docs/lighthouse-check-github-action/examples#overriding-config-and-option-defaults).
 
+### `maxRetries`
+**Type**: `number | undefined`
+
+The maximum number of times to retry. **Note**: This is not supported when running against Foo's API as retry logic is already in place.
+
 ### `prCommentEnabled`
 **Type**: `boolean | undefined`
 
