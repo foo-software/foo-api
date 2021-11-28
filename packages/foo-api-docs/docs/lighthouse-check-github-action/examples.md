@@ -40,17 +40,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: mkdir /tmp/artifacts
+    - run: mkdir ${{ github.workspace }}/tmp/artifacts
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        outputDirectory: /tmp/artifacts
+        outputDirectory: ${{ github.workspace }}/tmp/artifacts
         urls: 'https://www.foo.software,https://www.google.com'
     - name: Upload artifacts
       uses: actions/upload-artifact@master
       with:
         name: Lighthouse reports
-        path: /tmp/artifacts
+        path: ${{ github.workspace }}/tmp/artifacts
 ```
 
 ## Save HTML Reports to AWS S3, Slack Notifications and PR Comments
@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: mkdir /tmp/artifacts
+      - run: mkdir ${{ github.workspace }}/tmp/artifacts
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
@@ -82,7 +82,7 @@ jobs:
           gitAuthor: ${{ github.actor }}
           gitBranch: ${{ github.ref }}
           gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          outputDirectory: /tmp/artifacts
+          outputDirectory: ${{ github.workspace }}/tmp/artifacts
           urls: 'https://www.foo.software,https://www.foo.software/contact'
           sha: ${{ github.sha }}
           slackWebhookUrl: ${{ secrets.LIGHTHOUSE_CHECK_WEBHOOK_URL }}
