@@ -1,6 +1,6 @@
 {
   "name": "@foo-software/foo-api-client",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "author": "Adam Henson <adamhenson1979@gmail.com> (https://github.com/adamhenson)",
   "description": "An API client to communicate with Foo's REST API endpoints. Foo provides website quality monitoring with tools such as Lighthouse.",
   "bugs": {
