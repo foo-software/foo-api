@@ -221,6 +221,8 @@ jobs:
 
 In the below we use `foo-software/lighthouse-check-status-action@master` to verify minimum scores and fail the workflow if they aren't met.
 
+> **Tip**: In order to identify Lighthouse result output, you add an `id` so that the output can be consumed from a later step. In the example below, note that we add `id: lighthouseCheck` from the `Lighthouse` step and the consume the output in the later step `Verify Lighthouse Check results` with `${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}`.
+
 ```yaml
 name: Lighthouse
 on: [pull_request]
