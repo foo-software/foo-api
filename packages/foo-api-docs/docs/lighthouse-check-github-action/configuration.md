@@ -145,7 +145,7 @@ Simple example payload. This could be handy if you have commas in your URLs and 
 '["https://www.foo.software", "https://www.google.com"]'
 ```
 
-A more complex example below is if you're running Lighthouse via foo.software by passing [`fooApiToken`](#fooapitoken) and you want to associate pages you've added on Foo with temporary URLs using an ephemeral provided by a service like [Vercel](https://vercel.com). The parsed `urlsJson` value can be an array of strings or an array of string tuples. The first value of the tuple should be the Foo page API token and the second value will be the alternative URL. See the [Vercel example](http://localhost:3000/docs/lighthouse-check-github-action/examples#vercel-with-foo).
+A more complex example below is if you're running Lighthouse via foo.software by passing [`fooApiToken`](#fooapitoken) and you want to associate pages you've added on Foo with temporary URLs using an ephemeral provided by a service like [Vercel](https://vercel.com). The parsed `urlsJson` value can be an array of strings or an array of string tuples. The first value of the tuple should be the Foo page API token and the second value will be the alternative URL. See the [Vercel example](/docs/lighthouse-check-github-action/examples#vercel-with-foo).
 
 ```javascript
 '[["fooPageToken1", "https://some-temp-url.com/1234"], ["fooPageToken2", "https://some-temp-url.com/567"]]'

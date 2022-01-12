@@ -140,6 +140,14 @@ jobs:
           # ... all your other inputs
 ```
 
+#### Trigger Audits on Only Certain Pages in an Account with Different URLs
+
+If you want to trigger audits on pages you've added on Foo, but using different URLs. For example, if you use Vercel, Netlify, or CloudFlare to deploy an ephemeral URL in a PR and you want to track it on Foo under one "page" you can do so with the [`urlsJson` input](/docs/lighthouse-check-github-action/configuration#urlsjson).
+
+For an example on how to do this see the [Vercel example](#vercel-with-foo).
+
+> **Pro Tip**: In order to do the above, you'll need to have 2 Foo tokens. Firstly, you'll need the [API token found in your account](https://www.foo.software/account/api). Secondly, you'll need the ["page token" found in the page dashboard](https://www.foo.software/dashboard/pages) for the corresponding page.
+
 ## Overriding Config and Option Defaults
 
 **Note**: this approach is not supported when [running on Foo](#running-on-foo-and-saving-results).
@@ -192,6 +200,8 @@ jobs:
 #### Vercel with Foo
 
 If you're utilizing [Foo to save results](/docs/lighthouse-check-github-action/examples#running-on-foo-and-saving-results), you can associate a URL via the [`urlsJson` input](/docs/lighthouse-check-github-action/configuration#urlsjson) similar to the below. Note the use of the tuple, the first value being the Foo page API token and the second being the ephemeral URL.
+
+> **Pro Tip**: In order to do the above, you'll need to have 2 Foo tokens. Firstly, you'll need the [API token found in your account](https://www.foo.software/account/api). Secondly, you'll need the ["page token" found in the page dashboard](https://www.foo.software/dashboard/pages) for the corresponding page.
 
 ```yaml
 name: Lighthouse
