@@ -45,7 +45,7 @@ An endpoint to post comments to. This is only needed if you want to trigger comm
 ### `device`
 **Type**: `'all' | 'desktop' | 'mobile' | undefined`
 
-The device in which to run Lighthouse.
+The device in which to run Lighthouse. **Note**: When specifying `all` - Lighthouse will one multiple times (once per device).
 
 ### `extraHeaders`
 **Type**: `string | undefined`
