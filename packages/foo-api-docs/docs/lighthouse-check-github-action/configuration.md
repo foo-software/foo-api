@@ -43,7 +43,7 @@ A configuration file path in JSON format which holds all options defined here. T
 An endpoint to post comments to. This is only needed if you want to trigger comments on `push`. A `pull_request` trigger does not require this to be set. Typically this will be from GitHub's API. Example: `https://api.github.com/repos/:owner/:repo/commits/:commit_sha/comments.`
 
 ### `device`
-**Type**: `'desktop' | 'mobile' | undefined`
+**Type**: `'all' | 'desktop' | 'mobile' | undefined`
 
 The device in which to run Lighthouse.
 
