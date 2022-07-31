@@ -54,6 +54,7 @@ Lighthouse can mimic a desktop or mobile experience by emulating the device and 
 
 ```typescript
 interface Page {
+  apiToken: string;
   createdAt: string;
   device: DeviceType;
   id: string;
