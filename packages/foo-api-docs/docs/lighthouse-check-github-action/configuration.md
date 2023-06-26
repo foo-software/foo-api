@@ -76,7 +76,7 @@ Used in Slack notifications. In a [GitHub context](https://docs.github.com/en/ac
 ### `gitHubAccessToken`
 **Type**: `string | undefined`
 
-[Access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) of a user to post PR comments.
+[GitHub Action Token](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) which allows to post PR comments. 
 
 ### `locale`
 **Type**: `string | undefined`

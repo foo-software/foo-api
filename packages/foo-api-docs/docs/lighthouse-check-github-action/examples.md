@@ -81,7 +81,7 @@ jobs:
           awsSecretAccessKey: ${{ secrets.LIGHTHOUSE_CHECK_AWS_SECRET_ACCESS_KEY }}
           gitAuthor: ${{ github.actor }}
           gitBranch: ${{ github.ref }}
-          gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
           outputDirectory: ${{ github.workspace }}/tmp/artifacts
           urls: 'https://www.foo.software,https://www.foo.software/contact'
           sha: ${{ github.sha }}
