@@ -60,7 +60,7 @@ In the below example we do the following:
 - Run Lighthouse on 2 URLs
 - Upload reports to AWS S3.
 - Notify via Slack with details about the change from Git data.
-- By specifying the `pull_request` trigger and `gitHubAccessToken` - we allow automatic comments of audits on the corresponding PR from the token user.
+- By specifying the `pull_request` trigger and `gitHubAccessToken` - we allow automatic comments of audits on the corresponding PR.
 
 ```yaml
 name: Test Lighthouse Check
