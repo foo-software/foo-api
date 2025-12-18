@@ -15,14 +15,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-          cache: 'npm'
           scope: '@foo-software'
+      - name: Full Clean (no npm cache)
+        run: |
+          rm -rf node_modules
+          rm -rf packages/*/node_modules
+          rm -rf package-lock.json
       - name: Use stable npm version
         run: npm install -g npm@9.9.0
       - name: Install
         run: |
           npm ci
           npm run lerna -- bootstrap --hoist
+      - name: Show installed type versions
+        run: |
+          npm ls @types/node || true
+          npm ls @jest/types || true
+
       - name: Publish Packages
         run: |
           echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
