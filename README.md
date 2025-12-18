@@ -1,5 +1,8 @@
 # Foo API
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 [Foo (www.foo.software)](https://www.foo.software) provides website quality monitoring with tools such as Lighthouse. Foo can be used to establish historical records of Lighthouse audits to analyze website performance, SEO, accessibility and best practice. Monitoring website Lighthouse scores can be useful for maintainers to have insight when changes occur. Foo provides a means to manage Lighthouse audits of pages defined in its web UI. Foo also provides a [REST API](./endpoints.md) and a corresponding [Node.js API client](./api-client.md) to manage pages and Lighthouse audits programmatically which is what this project is all about!
 
 This is a monorepo providing NPM packages for Foo's public API and documentation related to it.
