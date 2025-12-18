@@ -29,6 +29,9 @@
       "npm run lint"
     ]
   },
+  "resolutions": {
+    "@types/node": "16.18.38"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "3.10.1",
     "@typescript-eslint/parser": "3.10.1",
