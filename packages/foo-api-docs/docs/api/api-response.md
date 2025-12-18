@@ -6,6 +6,9 @@ description: Documentation of Foo's API response for its page experience testing
 
 # Response
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 All responses will have either a `data` or `error` field. A request for a collection of data will populate `data` with an array, otherwise `data` will be a single JSON object. If an error occurs - th `error` field will be populated with a message. Below is an illustration of the API response in TypeScript.
 
 ```typescript

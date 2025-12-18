@@ -6,6 +6,9 @@ description: Documentation of Foo's API parameters for its page experience testi
 
 # Parameters
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 API methods that are "read-only" and return an array of data will typically support the following optional parameters. In the REST API these are query parameters. Below is a TypeScript representation useful for [Foo's Node.js API client](/docs/api-client).
 
 ```typescript

@@ -6,6 +6,9 @@ description: Documentation of Foo's API authentication for its page experience t
 
 # Authentication
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 Foo's REST API implements a loose form of "token authentication" or "bearer authentication". At the time of this writing all endpoints require authentication and there is a single, "all or nothing" level of authorization (as in - no endpoints requre specific types of access... you either have access to all of them or you don't).
 
 ## Example

@@ -6,6 +6,9 @@ description: Documentation of Foo's API resources for its page experience testin
 
 # Resources
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 The sets of data we manage can be thought of as resources. Each resource is represented by a shape of data consistent across interfaces.
 
 ## Common Types

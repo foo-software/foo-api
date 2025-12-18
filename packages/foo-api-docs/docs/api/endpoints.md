@@ -6,6 +6,9 @@ description: Documentation of Foo's API endpoints for its page experience testin
 
 # Endpoints
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 Foo exposes a public REST API for management of pages on to be audited by Lighthouse. Before proceeding you may want to first read the below sections.
 
 - [API Response](/docs/api/api-response)

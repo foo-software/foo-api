@@ -6,6 +6,9 @@ description: Documentation of Foo's API REST methods for its page experience tes
 
 # REST Methods
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 Foo's REST API expects standard requests and payloads. Below are examples of different REST methods via [cURL](https://en.wikipedia.org/wiki/CURL#cURL).
 
 ## GET

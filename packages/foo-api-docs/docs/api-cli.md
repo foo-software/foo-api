@@ -6,6 +6,9 @@ description: Documentation of Foo's API CLI for its page experience testing serv
 
 # API CLI
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 `foo-api` CLI is a Node.js package to provide utilities using [Foo's REST API](/docs/api/endpoints). This package is [hosted on NPM](https://www.npmjs.com/package/@foo-software/foo-api-cli).
 
 ## Getting Started

@@ -6,6 +6,9 @@ description: Documentation of Foo's Node.js API CLI for its page experience test
 
 # Node.js API Client
 
+> [!IMPORTANT]
+> Foo API is now deprecated and will sunset on 01/01/2026. It will be permanently offline soon after that date.
+
 The API client is a Node.js package to interface with [Foo's REST API](/docs/api/endpoints) programmatically. This package is [hosted on NPM](https://www.npmjs.com/package/@foo-software/foo-api-client) and exports an API client class with methods for interacting with endpoints. The project is typed (for those working with TypeScript). Before proceeding you may want to first read the below sections.
 
 - [API Endpoints](/docs/api/endpoints)
