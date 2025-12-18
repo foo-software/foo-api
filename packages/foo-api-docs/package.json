@@ -19,7 +19,7 @@
     "typescript"
   ],
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider docusaurus build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider docusaurus build --trace-warnings --verbose",
     "clean": "rimraf build",
     "clear": "docusaurus clear",
     "compress-files": "compress-files --directory ./build",
