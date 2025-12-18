@@ -20,7 +20,6 @@ jobs:
         run: |
           rm -rf node_modules
           rm -rf packages/*/node_modules
-          rm -rf package-lock.json
       - name: Use stable npm version
         run: npm install -g npm@9.9.0
       - name: Install
