@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: '18.x'
           scope: '@foo-software'
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
       - name: Full Clean (no npm cache)
         run: |
           rm -rf node_modules
@@ -37,7 +39,12 @@ jobs:
           npm ls @jest/types || true
 
       - name: Publish Packages
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
+          # Force npm to use an explicit userconfig (matches the local workaround that actually publishes)
+          printf "//registry.npmjs.org/:_authToken=%s\n" "$NPM_TOKEN" > "${GITHUB_WORKSPACE}/.npmrc"
+          export NPM_CONFIG_USERCONFIG="${GITHUB_WORKSPACE}/.npmrc"
+          npm whoami
           node packages/foo-api-ci-tools/dist/bin/config-git.js
           node packages/foo-api-ci-tools/dist/bin/publish-packages.js
