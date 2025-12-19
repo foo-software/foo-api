@@ -11,8 +11,10 @@ export const config = () => {
 
 export const checkout = (branch = 'master') => {
   shell(`git remote set-url origin ${GIT_URL}`);
-  shell('git fetch');
-  shell(`git checkout ${branch} && git pull`);
+  // Ensure we are exactly at the remote head (no shallow/merge weirdness in CI)
+  shell(`git fetch --tags --prune origin ${branch}`);
+  shell(`git checkout ${branch}`);
+  shell(`git reset --hard origin/${branch}`);
 };
 
 export const add = () => {
